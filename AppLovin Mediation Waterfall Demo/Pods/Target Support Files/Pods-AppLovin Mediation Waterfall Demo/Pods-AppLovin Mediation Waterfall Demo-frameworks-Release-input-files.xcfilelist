@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-frameworks.sh
+${BUILT_PRODUCTS_DIR}/HyBid/HyBid.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/HyBid/Core/OMSDK_Pubnativenet.framework/OMSDK_Pubnativenet
