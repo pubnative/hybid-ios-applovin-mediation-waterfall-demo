@@ -16,31 +16,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-// Step 3: Setup & Initialize HyBid SDK
-        // HyBid.initWithAppToken(appToken, completion: nil)
-// Step 4: Setup & Initialize AppLovin SDK
+// Step 3: Setup & Initialize AppLovin SDK
         ALSdk.shared()!.mediationProvider = "max"
         ALSdk.shared()!.userIdentifier = "USER_ID"
         ALSdk.shared()!.initializeSdk { (configuration: ALSdkConfiguration) in }
-// Step 5: Set COPPA (Optional)
+// Step 4: Set COPPA (Optional)
         HyBid.setCoppa(false)
-// Step 6: Set Test Mode (Optional)
+// Step 5: Set Test Mode (Optional)
         HyBid.setTestMode(true)
-// Step 7: Set Location Tracking (Optional)
+// Step 6: Set Location Tracking (Optional)
         HyBid.setLocationTracking(true)
-// Step 8: Set HTML Interstitial skipOffset (Optional)
+// Step 7: Set HTML Interstitial skipOffset (Optional)
         HyBid.setHTMLInterstitialSkipOffset(2)
-// Step 9: Set Video Interstitial skipOffset (Optional)
+// Step 8: Set Video Interstitial skipOffset (Optional)
         HyBid.setVideoInterstitialSkipOffset(5)
-// Step 10: Set Custom Click Behavior (Optional)
+// Step 9: Set Custom Click Behavior (Optional)
         HyBid.setInterstitialActionBehaviour(HB_CREATIVE)
-// Step 11: Set Targeting (Optional)
+// Step 10: Set Targeting (Optional)
         let targeting = HyBidTargetingModel()
         targeting.age = 28
         targeting.interests = ["music"]
         targeting.gender = "f"     // "f" for female, "m" for male
         HyBid.setTargeting(targeting)
-// Step 12: Set HyBid log level (Optional)
+// Step 11: Set HyBid log level (Optional)
         HyBidLogger.setLogLevel(HyBidLogLevelDebug)
         return true
     }
