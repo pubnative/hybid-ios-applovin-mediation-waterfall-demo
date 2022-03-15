@@ -13,15 +13,11 @@ import AppLovinSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-    let appToken = "543027b8e954474cbcd9a98481622a3b"
-    let adUnitID = "239a2b76800b4fc6b63cf817eaf602d4"
-    let appStoreID = "1530210244"
-    
+        
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
 // Step 3: Setup & Initialize HyBid SDK
-        HyBid.initWithAppToken(appToken, completion: nil)
+        // HyBid.initWithAppToken(appToken, completion: nil)
 // Step 4: Setup & Initialize AppLovin SDK
         ALSdk.shared()!.mediationProvider = "max"
         ALSdk.shared()!.userIdentifier = "USER_ID"
