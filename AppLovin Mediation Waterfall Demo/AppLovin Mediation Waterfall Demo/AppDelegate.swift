@@ -6,7 +6,7 @@
 //
 
 import UIKit
-// Step 1: Import HyBid into your class
+// Step 1: Import HyBid into your class (Only required if anything in Step 4 below is set)
 import HyBid
 // Step 2: Import AppLovin SDK into your class
 import AppLovinSDK
@@ -15,32 +15,40 @@ import AppLovinSDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Step 3: Setup & Initialize AppLovin SDK
+        let settings = ALSdkSettings()
+
+        // Optional: Enable built in User Consent Flow
+        settings.consentFlowSettings.isEnabled = true
+        settings.consentFlowSettings.privacyPolicyURL = URL(string: "https://verve.com/product-privacy-policies/")
+        settings.consentFlowSettings.termsOfServiceURL = URL(string: "https://verve.com/publisher-content-guidelines/")
+    
+        let sdk = ALSdk.shared(with: settings)!
         
-// Step 3: Setup & Initialize HyBid SDK
-        // HyBid.initWithAppToken(appToken, completion: nil)
-// Step 4: Setup & Initialize AppLovin SDK
-        ALSdk.shared()!.mediationProvider = "max"
-        ALSdk.shared()!.userIdentifier = "USER_ID"
-        ALSdk.shared()!.initializeSdk { (configuration: ALSdkConfiguration) in }
-// Step 5: Set COPPA (Optional)
+        // Please make sure to set the mediation provider value to "max" to ensure proper functionality
+        sdk.mediationProvider = "max"
+        sdk.initializeSdk { (configuration: ALSdkConfiguration) in }
+
+        // Step 4: Optional Verve HyBid SDK settings
+        // Set COPPA (Optional)
         HyBid.setCoppa(false)
-// Step 6: Set Test Mode (Optional)
-        HyBid.setTestMode(true)
-// Step 7: Set Location Tracking (Optional)
+        // Test Mode (Optional)
+        HyBid.setTestMode(false)
+        // Location Tracking (Optional)
         HyBid.setLocationTracking(true)
-// Step 8: Set HTML Interstitial skipOffset (Optional)
+        // HTML/MRAID Interstitial skipOffset (Optional)
         HyBid.setHTMLInterstitialSkipOffset(2)
-// Step 9: Set Video Interstitial skipOffset (Optional)
+        // Video Interstitial skipOffset (Optional)
         HyBid.setVideoInterstitialSkipOffset(5)
-// Step 10: Set Custom Click Behavior (Optional)
+        // Custom Click Behavior (Optional)
         HyBid.setInterstitialActionBehaviour(HB_CREATIVE)
-// Step 11: Set Targeting (Optional)
+        // 1st party user data Targeting (Optional)
         let targeting = HyBidTargetingModel()
         targeting.age = 28
         targeting.interests = ["music"]
         targeting.gender = "f"     // "f" for female, "m" for male
         HyBid.setTargeting(targeting)
-// Step 12: Set HyBid log level (Optional)
+        // Set HyBid log level (Optional)
         HyBidLogger.setLogLevel(HyBidLogLevelDebug)
         return true
     }
