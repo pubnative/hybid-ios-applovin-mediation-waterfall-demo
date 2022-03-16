@@ -1,8 +1,8 @@
 PODS:
-  - AppLovinMediationVerveCustomNetworkAdapter (2.11.1.0):
-    - AppLovinSDK (~> 11.2.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (2.11.1.1):
+    - AppLovinSDK (>= 11.1.2)
     - HyBid (= 2.11.1)
-  - AppLovinSDK (11.2.1)
+  - AppLovinSDK (11.3.0)
   - HyBid (2.11.1):
     - HyBid/Banner (= 2.11.1)
     - HyBid/Core (= 2.11.1)
@@ -20,7 +20,7 @@ PODS:
     - HyBid/Core
 
 DEPENDENCIES:
-  - AppLovinMediationVerveCustomNetworkAdapter (= 2.11.1.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (= 2.11.1.1)
 
 SPEC REPOS:
   trunk:
@@ -29,10 +29,10 @@ SPEC REPOS:
     - HyBid
 
 SPEC CHECKSUMS:
-  AppLovinMediationVerveCustomNetworkAdapter: e25e93b7e41562a0ebdcafc66c0ac67da4229d1b
-  AppLovinSDK: 2ed08703a7e44477ef5dedc264a1ef1e8050dd6c
+  AppLovinMediationVerveCustomNetworkAdapter: 7029322db904b1756586ef558896925ac89915f9
+  AppLovinSDK: df5f0ab4fcad2668ac4563bc3c66c2dddb1099c6
   HyBid: dc34b049a24c2fc58e19e9df1ffd92c9dc2db73e
 
-PODFILE CHECKSUM: 6927d8345da8684c34a80b2a11e72e748be32ca9
+PODFILE CHECKSUM: 7af7fe0eb4a14fa647bc7a9a51684a2932918c13
 
 COCOAPODS: 1.11.2
