@@ -2,7 +2,7 @@
 AppLovin MAX supports both bidding and waterfall mediation with Verve HyBid SDK.
 Currently the following ad formats are supported:
 * Banner
-* MRECT
+* MRect
 * Fullscreen Interstitial (including video)
 * Fullscreen Rewarded Video
 
@@ -17,7 +17,7 @@ For bidding, please follow the official AppLovin documentation.
 The most recent SDK versions supported by AppLoving MAX bidding mediation are:
 * AppLovin SDK: [11.2.1](https://github.com/AppLovin/AppLovin-MAX-SDK-iOS/releases)
 * AppLovin Verve bidding adapter: [2.11.1.3](https://github.com/AppLovin/AppLovin-MAX-SDK-iOS/blob/master/Verve/CHANGELOG.md)
-* Verve HyBid SDK: [2.11.1](https://github.com/pubnative/pubnative-hybid-ios-sdk/releases)
+* Verve HyBid SDK: [2.12.1](https://github.com/pubnative/pubnative-hybid-ios-sdk/releases)
 
 # Waterfall
 Waterfall mediation is only supported via AppLovin MAX's custom network adapters.
@@ -88,4 +88,3 @@ This page gives you step-by-step instructions for how you set Verve live as an a
 ![Custom SDK Network AdUnit Setup](https://github.com/pubnative/pubnative-hybid-android-sdk/wiki/Images/applovin-custom-network-adunit.png)
 
 Repeat these steps for each Ad Unit separately.
-

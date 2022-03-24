@@ -22,7 +22,7 @@
 
 #import "AppLovinMediationVerveCustomNetworkAdapter.h"
 
-#define VERVE_ADAPTER_VERSION @"2.11.1.1"
+#define VERVE_ADAPTER_VERSION @"2.12.1.0"
 #define MAX_MEDIATION_VENDOR @"m"
 #define PARAM_APP_TOKEN @"pn_app_token"
 #define PARAM_TEST_MODE @"pn_test"
@@ -302,14 +302,13 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
-    [HyBidSettings sharedInstance].appToken = appToken;
     self.adViewAd = [[HyBidAdView alloc] initWithSize: [self sizeFromAdFormat: adFormat]];
     self.adViewAd.isMediation = YES;
-    // [self.adViewAd setMediationVendor: MAX_MEDIATION_VENDOR];
+    [self.adViewAd setMediationVendor: MAX_MEDIATION_VENDOR];
     self.adViewAdapterDelegate = [[AppLovinMediationVerveBannerDelegate alloc] initWithParentAdapter: self andNotify: delegate];
     self.adViewAd.delegate = self.adViewAdapterDelegate;
     
-    [self.adViewAd loadWithZoneID:zoneId andWithDelegate:self.adViewAdapterDelegate];
+    [self.adViewAd loadWithZoneID:zoneId withAppToken:appToken andWithDelegate:self.adViewAdapterDelegate];
 }
 
 #pragma mark - MAInterstitialAdapter Methods
@@ -339,11 +338,10 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
-    [HyBidSettings sharedInstance].appToken = appToken;
     self.interstitialAdapterDelegate = [[AppLovinMediationVerveInterstitialAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
-    self.interstitialAd = [[HyBidInterstitialAd alloc] initWithZoneID:zoneId andWithDelegate:self.interstitialAdapterDelegate];
+    self.interstitialAd = [[HyBidInterstitialAd alloc] initWithZoneID:zoneId withAppToken:appToken andWithDelegate:self.interstitialAdapterDelegate];
     self.interstitialAd.isMediation = YES;
-    //[self.interstitialAd setMediationVendor: MAX_MEDIATION_VENDOR];
+    [self.interstitialAd setMediationVendor: MAX_MEDIATION_VENDOR];
 
     [self.interstitialAd load];
 }
@@ -390,11 +388,10 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
-    [HyBidSettings sharedInstance].appToken = appToken;
     self.rewardedAdapterDelegate = [[AppLovinMediationVerveRewardedAdsDelegate alloc] initWithParentAdapter: self andNotify: delegate];
-    self.rewardedAd = [[HyBidRewardedAd alloc] initWithZoneID:zoneId andWithDelegate:self.rewardedAdapterDelegate];
+    self.rewardedAd = [[HyBidRewardedAd alloc] initWithZoneID:zoneId withAppToken:appToken andWithDelegate:self.rewardedAdapterDelegate];
     self.rewardedAd.isMediation = YES;
-    //[self.rewardedAd setMediationVendor: MAX_MEDIATION_VENDOR];
+    [self.rewardedAd setMediationVendor: MAX_MEDIATION_VENDOR];
     
     [self.rewardedAd load];
 }
@@ -442,11 +439,10 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
-    [HyBidSettings sharedInstance].appToken = appToken;
     HyBidNativeAdLoader *nativeAdLoader = [[HyBidNativeAdLoader alloc] init];
     nativeAdLoader.isMediation = YES;
     self.nativeAdAdapterDelegate = [[AppLovinMediationVerveNativeAdDelegate alloc] initWithParentAdapter: self serverParameters: parameters.serverParameters andNotify: delegate];
-    [nativeAdLoader loadNativeAdWithDelegate:self.nativeAdAdapterDelegate withZoneID:zoneId];
+    [nativeAdLoader loadNativeAdWithDelegate:self.nativeAdAdapterDelegate withZoneID:zoneId withAppToken:appToken];
 }
 
 @end
