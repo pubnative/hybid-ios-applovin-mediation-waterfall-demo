@@ -11,7 +11,7 @@ class Rewarded: UIViewController {
     @IBOutlet weak var showAdButton: UIButton!
     
     var rewardedAd: MARewardedAd!
-    let adUnitID = "YOUR_AD_UNIT_ID"
+    let adUnitID = "be31375eb2f3f111"
     
     override func viewDidLoad() {
         super.viewDidLoad()

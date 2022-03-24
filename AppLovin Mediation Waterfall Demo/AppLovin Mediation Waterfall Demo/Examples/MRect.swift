@@ -11,7 +11,7 @@ class MRect: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var adView: MAAdView!
-    let adUnitID = "YOUR_AD_UNIT_ID"
+    let adUnitID = "6497187b975fa9cc"
 
     override func viewDidLoad() {
         super.viewDidLoad()

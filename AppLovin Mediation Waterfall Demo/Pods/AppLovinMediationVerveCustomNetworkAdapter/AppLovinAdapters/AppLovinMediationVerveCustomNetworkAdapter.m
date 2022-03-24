@@ -22,8 +22,10 @@
 
 #import "AppLovinMediationVerveCustomNetworkAdapter.h"
 
-#define VERVE_ADAPTER_VERSION @"2.11.1"
+#define VERVE_ADAPTER_VERSION @"2.11.1.1"
+#define MAX_MEDIATION_VENDOR @"m"
 #define PARAM_APP_TOKEN @"pn_app_token"
+#define PARAM_TEST_MODE @"pn_test"
 #define DUMMY_TOKEN @"dummytoken"
 
 @interface AppLovinMediationVerveBannerDelegate : NSObject<HyBidAdViewDelegate>
@@ -96,7 +98,7 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     {
         ALVerveInitializationStatus = MAAdapterInitializationStatusInitializing;
         
-        NSString *appToken = [parameters.serverParameters al_stringForKey: PARAM_APP_TOKEN defaultValue: DUMMY_TOKEN];
+        NSString *appToken = [parameters.customParameters al_stringForKey: PARAM_APP_TOKEN defaultValue: DUMMY_TOKEN];
         [self log: @"Initializing Verve SDK with app token: %@...", appToken];
         
         if ( [parameters isTesting] )
@@ -274,28 +276,36 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self log: @"Loading %@ ad view ad...", adFormat.label];
     
     NSString* zoneId = [parameters thirdPartyAdPlacementIdentifier];
-    NSString *appToken = [parameters.serverParameters al_stringForKey: PARAM_APP_TOKEN];
-    
+    NSString *appToken = [parameters.customParameters al_stringForKey: PARAM_APP_TOKEN];
+    NSString *testMode = [parameters.customParameters al_stringForKey: PARAM_TEST_MODE defaultValue:@"0"];
+
     if (!zoneId || ![zoneId al_isValidString] || !appToken || ![appToken al_isValidString]) {
         [delegate didFailToLoadAdViewAdWithError:[MAAdapterError internalError]];
     } else {
+        if ( [testMode isEqualToString:@"1"]) {
+            // Test mode will remain active throughout this app session.
+            [HyBid setTestMode: YES];
+            [HyBidLogger setLogLevel: HyBidLogLevelDebug];
+        }
         if ([[[HyBidSettings sharedInstance] appToken] isEqualToString:appToken] && [HyBid isInitialized]) {
-            [self requestBanner:parameters adFormat:adFormat zoneId:zoneId andNotify:delegate];
+            [self requestBanner:parameters adFormat:adFormat appToken:appToken zoneId:zoneId andNotify:delegate];
         } else {
             [HyBid initWithAppToken: appToken completion:^(BOOL success) {
-                [self requestBanner:parameters adFormat:adFormat zoneId:zoneId andNotify:delegate];
+                [self requestBanner:parameters adFormat:adFormat appToken:appToken zoneId:zoneId andNotify:delegate];
             }];
         }
     }
 }
 
-- (void)requestBanner:(id<MAAdapterResponseParameters>)parameters adFormat:(MAAdFormat *)adFormat zoneId:(NSString*) zoneId andNotify:(id<MAAdViewAdapterDelegate>)delegate
+- (void)requestBanner:(id<MAAdapterResponseParameters>)parameters adFormat:(MAAdFormat *)adFormat appToken:(NSString *)appToken zoneId:(NSString*) zoneId andNotify:(id<MAAdViewAdapterDelegate>)delegate
 {
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
+    [HyBidSettings sharedInstance].appToken = appToken;
     self.adViewAd = [[HyBidAdView alloc] initWithSize: [self sizeFromAdFormat: adFormat]];
     self.adViewAd.isMediation = YES;
+    // [self.adViewAd setMediationVendor: MAX_MEDIATION_VENDOR];
     self.adViewAdapterDelegate = [[AppLovinMediationVerveBannerDelegate alloc] initWithParentAdapter: self andNotify: delegate];
     self.adViewAd.delegate = self.adViewAdapterDelegate;
     
@@ -309,29 +319,31 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self log: @"Loading interstitial ad"];
     
     NSString* zoneId = [parameters thirdPartyAdPlacementIdentifier];
-    NSString *appToken = [parameters.serverParameters al_stringForKey: PARAM_APP_TOKEN];
+    NSString *appToken = [parameters.customParameters al_stringForKey: PARAM_APP_TOKEN];
     
     if (!zoneId || ![zoneId al_isValidString] || !appToken || ![appToken al_isValidString]) {
         [delegate didFailToLoadInterstitialAdWithError:[MAAdapterError internalError]];
     } else {
         if ([[[HyBidSettings sharedInstance] appToken] isEqualToString:appToken] && [HyBid isInitialized]) {
-            [self requestInterstitial:parameters zoneId:zoneId andNotify:delegate];
+            [self requestInterstitial:parameters appToken:appToken zoneId:zoneId andNotify:delegate];
         } else {
             [HyBid initWithAppToken: appToken completion:^(BOOL success) {
-                [self requestInterstitial:parameters zoneId:zoneId andNotify:delegate];
+                [self requestInterstitial:parameters appToken:appToken zoneId:zoneId andNotify:delegate];
             }];
         }
     }
 }
 
-- (void)requestInterstitial:(id<MAAdapterResponseParameters>)parameters zoneId:(NSString*) zoneId andNotify:(id<MAInterstitialAdapterDelegate>)delegate
+- (void)requestInterstitial:(id<MAAdapterResponseParameters>)parameters appToken:(NSString *)appToken zoneId:(NSString*) zoneId andNotify:(id<MAInterstitialAdapterDelegate>)delegate
 {
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
+    [HyBidSettings sharedInstance].appToken = appToken;
     self.interstitialAdapterDelegate = [[AppLovinMediationVerveInterstitialAdDelegate alloc] initWithParentAdapter: self andNotify: delegate];
     self.interstitialAd = [[HyBidInterstitialAd alloc] initWithZoneID:zoneId andWithDelegate:self.interstitialAdapterDelegate];
     self.interstitialAd.isMediation = YES;
+    //[self.interstitialAd setMediationVendor: MAX_MEDIATION_VENDOR];
 
     [self.interstitialAd load];
 }
@@ -358,29 +370,31 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self log: @"Loading rewarded ad"];
     
     NSString* zoneId = [parameters thirdPartyAdPlacementIdentifier];
-    NSString *appToken = [parameters.serverParameters al_stringForKey: PARAM_APP_TOKEN];
+    NSString *appToken = [parameters.customParameters al_stringForKey: PARAM_APP_TOKEN];
     
     if (!zoneId || ![zoneId al_isValidString] || !appToken || ![appToken al_isValidString]) {
         [delegate didFailToLoadRewardedAdWithError:[MAAdapterError internalError]];
     } else {
         if ([[[HyBidSettings sharedInstance] appToken] isEqualToString:appToken] && [HyBid isInitialized]) {
-            [self requestRewarded:parameters zoneId:zoneId andNotify:delegate];
+            [self requestRewarded:parameters appToken:appToken zoneId:zoneId andNotify:delegate];
         } else {
             [HyBid initWithAppToken: appToken completion:^(BOOL success) {
-                [self requestRewarded:parameters zoneId:zoneId andNotify:delegate];
+                [self requestRewarded:parameters appToken:appToken zoneId:zoneId andNotify:delegate];
             }];
         }
     }
 }
 
-- (void)requestRewarded:(id<MAAdapterResponseParameters>)parameters zoneId:(NSString*) zoneId andNotify:(id<MARewardedAdapterDelegate>)delegate
+- (void)requestRewarded:(id<MAAdapterResponseParameters>)parameters appToken:(NSString *)appToken zoneId:(NSString*) zoneId andNotify:(id<MARewardedAdapterDelegate>)delegate
 {
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
+    [HyBidSettings sharedInstance].appToken = appToken;
     self.rewardedAdapterDelegate = [[AppLovinMediationVerveRewardedAdsDelegate alloc] initWithParentAdapter: self andNotify: delegate];
     self.rewardedAd = [[HyBidRewardedAd alloc] initWithZoneID:zoneId andWithDelegate:self.rewardedAdapterDelegate];
     self.rewardedAd.isMediation = YES;
+    //[self.rewardedAd setMediationVendor: MAX_MEDIATION_VENDOR];
     
     [self.rewardedAd load];
 }
@@ -408,26 +422,27 @@ static MAAdapterInitializationStatus ALVerveInitializationStatus = NSIntegerMin;
     [self log: @"Loading rewarded ad"];
     
     NSString* zoneId = [parameters thirdPartyAdPlacementIdentifier];
-    NSString *appToken = [parameters.serverParameters al_stringForKey: PARAM_APP_TOKEN];
+    NSString *appToken = [parameters.customParameters al_stringForKey: PARAM_APP_TOKEN];
     
     if (!zoneId || ![zoneId al_isValidString] || !appToken || ![appToken al_isValidString]) {
         [delegate didFailToLoadNativeAdWithError:[MAAdapterError internalError]];
     } else {
         if ([[[HyBidSettings sharedInstance] appToken] isEqualToString:appToken] && [HyBid isInitialized]) {
-            [self requestNative:parameters zoneId:zoneId andNotify:delegate];
+            [self requestNative:parameters appToken:appToken zoneId:zoneId andNotify:delegate];
         } else {
             [HyBid initWithAppToken: appToken completion:^(BOOL success) {
-                [self requestNative:parameters zoneId:zoneId andNotify:delegate];
+                [self requestNative:parameters appToken:appToken zoneId:zoneId andNotify:delegate];
             }];
         }
     }
 }
 
-- (void)requestNative:(id<MAAdapterResponseParameters>)parameters zoneId:(NSString*) zoneId andNotify:(id<MANativeAdAdapterDelegate>)delegate
+- (void)requestNative:(id<MAAdapterResponseParameters>)parameters appToken:(NSString *)appToken zoneId:(NSString*) zoneId andNotify:(id<MANativeAdAdapterDelegate>)delegate
 {
     [self updateConsentWithParameters: parameters];
     [self updateMuteStateForParameters: parameters];
     
+    [HyBidSettings sharedInstance].appToken = appToken;
     HyBidNativeAdLoader *nativeAdLoader = [[HyBidNativeAdLoader alloc] init];
     nativeAdLoader.isMediation = YES;
     self.nativeAdAdapterDelegate = [[AppLovinMediationVerveNativeAdDelegate alloc] initWithParentAdapter: self serverParameters: parameters.serverParameters andNotify: delegate];

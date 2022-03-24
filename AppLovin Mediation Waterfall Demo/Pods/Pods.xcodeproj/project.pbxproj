@@ -770,6 +770,7 @@
 		964D0E7DECA5BE8FAE41C20E5F7E1568 /* HyBidRemoteFeatureResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidRemoteFeatureResolver.m; path = "PubnativeLite/PubnativeLite/Core/Remote Config/HyBidRemoteFeatureResolver.m"; sourceTree = "<group>"; };
 		96B3950644C37DF389BC27DDD31FCA67 /* HyBidVASTVideoClick.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTVideoClick.m; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTVideoClick.m"; sourceTree = "<group>"; };
 		96F73756A59655A2A08CC900BDBBCFC0 /* HyBidRemoteConfigParameter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidRemoteConfigParameter.m; path = "PubnativeLite/PubnativeLite/Core/Remote Config/HyBidRemoteConfigParameter.m"; sourceTree = "<group>"; };
+		979A909B616A65C93C3861252E70BCBF /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.3.0/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
 		97C98D841FDE168C26D515FBDEF20994 /* HyBidVASTResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTResource.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTResource.h"; sourceTree = "<group>"; };
 		988E3409981559D11F12CFF06D59C2DD /* HyBidLocationEncoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidLocationEncoding.h; path = PubnativeLite/PubnativeLite/Core/Utils/HyBidLocationEncoding.h; sourceTree = "<group>"; };
 		997AF838866D60535E9836A82CA560A0 /* PNLiteVASTPlayerViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PNLiteVASTPlayerViewController.xib; path = PubnativeLite/PubnativeLite/Resources/PNLiteVASTPlayerViewController.xib; sourceTree = "<group>"; };
@@ -792,7 +793,6 @@
 		A40C86F296C3194BC0A93479D40A8D9F /* HyBidInterstitialPresenter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidInterstitialPresenter.h; path = PubnativeLite/PubnativeLite/FullScreen/HyBidInterstitialPresenter.h; sourceTree = "<group>"; };
 		A46CDAFDF8E4D93CF5AD7E44DD444DD2 /* PNLitePlay@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PNLitePlay@2x.png"; path = "PubnativeLite/PubnativeLite/Resources/PNLitePlay@2x.png"; sourceTree = "<group>"; };
 		A4CC9A5F89E3213489E1A4BA56AAD454 /* HyBidNativeAd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidNativeAd.m; path = PubnativeLite/PubnativeLite/Native/HyBidNativeAd.m; sourceTree = "<group>"; };
-		A539F3B787FA61521350ACB5BDB1481D /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.2.1/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
 		A665B1884C14BA6CEEDFF5DB9EB40B5A /* PNLiteHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLiteHttpRequest.h; path = PubnativeLite/PubnativeLite/Core/Network/PNLiteHttpRequest.h; sourceTree = "<group>"; };
 		A747E076C9FB25442B8E1A81E841EFE4 /* HyBidStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidStarRatingView.h; path = PubnativeLite/PubnativeLite/Core/HyBidStarRatingView.h; sourceTree = "<group>"; };
 		A8237E9CE27F9DC369802A471D0CC986 /* HyBidRemoteConfigRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidRemoteConfigRequest.h; path = "PubnativeLite/PubnativeLite/Core/Remote Config/HyBidRemoteConfigRequest.h"; sourceTree = "<group>"; };
@@ -804,7 +804,6 @@
 		ABF3BE80719040FCA8E39B7D9D5DB5A7 /* HyBidReportingEndpoints.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidReportingEndpoints.m; path = PubnativeLite/PubnativeLite/Core/Anayltics/HyBidReportingEndpoints.m; sourceTree = "<group>"; };
 		AC31309E6478F1CAA0834DE79A41D39A /* HyBidPrebidUtils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidPrebidUtils.h; path = "PubnativeLite/PubnativeLite/Core/Utils/Header Bidding/HyBidPrebidUtils.h"; sourceTree = "<group>"; };
 		AC6E4E1D4F7571C289C35CAEBE0076DC /* HyBidAdPresenterFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidAdPresenterFactory.m; path = "PubnativeLite/PubnativeLite/Core/Ad Presenter/HyBidAdPresenterFactory.m"; sourceTree = "<group>"; };
-		ACA730F0D86F693B46CA8E54B4D35853 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.2.1/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		ACC615DA660FAEBEB72C9F5EF5BA93EB /* PNLiteMute@2x.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "PNLiteMute@2x.png"; path = "PubnativeLite/PubnativeLite/Resources/PNLiteMute@2x.png"; sourceTree = "<group>"; };
 		ADFBE97258338A8188B68460A457A50D /* HyBidVASTAdPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTAdPresenter.m; path = "PubnativeLite/PubnativeLite/Core/Ad Presenter/HyBidVASTAdPresenter.m"; sourceTree = "<group>"; };
 		AE05296FFAA7EE1B37EC1389A7DF1960 /* HyBidVASTIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTIcon.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTIcon.h"; sourceTree = "<group>"; };
@@ -932,6 +931,7 @@
 		F3D178991895D6B4CD88974DB589D81B /* PNLiteImpressionTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLiteImpressionTracker.m; path = PubnativeLite/PubnativeLite/Core/Tracking/PNLiteImpressionTracker.m; sourceTree = "<group>"; };
 		F41EF6BF979CA6FE27E4D85C842A19C1 /* PNLiteMute.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = PNLiteMute.png; path = PubnativeLite/PubnativeLite/Resources/PNLiteMute.png; sourceTree = "<group>"; };
 		F4A8B5AFBB088B093D8E080F8CCFF741 /* PNLiteOpenRTBResponseModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLiteOpenRTBResponseModel.m; path = "PubnativeLite/PubnativeLite/Core/Ad Model/PNLiteOpenRTBResponseModel.m"; sourceTree = "<group>"; };
+		F4E184E314CC0B780A7EFB5D7DB8DC5E /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.3.0/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		F598AAE3BEF2D7856E5C569520A2CAF8 /* PNLiteImpressionTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLiteImpressionTracker.h; path = PubnativeLite/PubnativeLite/Core/Tracking/PNLiteImpressionTracker.h; sourceTree = "<group>"; };
 		F5B24C5FCA4CEBCD5276E0DB71A286B3 /* HyBidInterstitialAd.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidInterstitialAd.m; path = PubnativeLite/PubnativeLite/FullScreen/HyBidInterstitialAd.m; sourceTree = "<group>"; };
 		F5DCE75477589C5861CE2B98FD698B92 /* HyBidVASTMediaFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTMediaFile.m; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTMediaFile.m"; sourceTree = "<group>"; };
@@ -1433,6 +1433,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		5E8946FCA87BE850247EB6829BBF3859 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				979A909B616A65C93C3861252E70BCBF /* AppLovinSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		60217E63ACCB69E90A5D217C7090F01E /* FullScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1510,10 +1518,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		89B2A60BF89A2D489FFE4C3BC750E976 /* Resources */ = {
+		88937B394DAD524DB4878E7F9A9A2B01 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				ACA730F0D86F693B46CA8E54B4D35853 /* AppLovinSDKResources.bundle */,
+				F4E184E314CC0B780A7EFB5D7DB8DC5E /* AppLovinSDKResources.bundle */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1566,14 +1574,6 @@
 			path = "../Target Support Files/AppLovinSDK";
 			sourceTree = "<group>";
 		};
-		E549752531D57D363AE2ACCB307D4878 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A539F3B787FA61521350ACB5BDB1481D /* AppLovinSDK.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		F028604F95CE99E93E2B5D8D9A9BA062 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1620,8 +1620,8 @@
 		FC45AA78520259F2583D68EA0E208CFF /* AppLovinSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E549752531D57D363AE2ACCB307D4878 /* Frameworks */,
-				89B2A60BF89A2D489FFE4C3BC750E976 /* Resources */,
+				5E8946FCA87BE850247EB6829BBF3859 /* Frameworks */,
+				88937B394DAD524DB4878E7F9A9A2B01 /* Resources */,
 				E4C935698CFE81FE5D7A2B7AFAC00927 /* Support Files */,
 			);
 			name = AppLovinSDK;
@@ -2311,44 +2311,6 @@
 			};
 			name = Debug;
 		};
-		198CEBA5F5175346BD74BDE8100D9293 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7ED4663F1F1A8AB85185FF76D3525FEF /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		2930D24C40C055FDEA8BECB45F02385E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FEE58B02375ED8A8FEF3635E960A7936 /* AppLovinMediationVerveCustomNetworkAdapter.debug.xcconfig */;
@@ -2402,43 +2364,6 @@
 			};
 			name = Release;
 		};
-		6E002EDF5A5F5638DB30729FB3579630 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0285AE6DD2CB906731AAB705B3169EFE /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		72073CF58CE73F27B5D8E8D967CCCF8E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 21D3CF0D3FAB3C336E005BC154C79FC7 /* HyBid.release.xcconfig */;
@@ -2474,6 +2399,43 @@
 			};
 			name = Release;
 		};
+		8079F3542B007C80EC3311496261E9E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0285AE6DD2CB906731AAB705B3169EFE /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		86A10A9452C7C6F35F40D5D89577BB2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B45FBBA32B78C0C172FC4199012C4425 /* HyBid.debug.xcconfig */;
@@ -2508,7 +2470,7 @@
 			};
 			name = Debug;
 		};
-		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2561,7 +2523,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -2574,7 +2536,44 @@
 			};
 			name = Debug;
 		};
-		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+		9BF8B98F0E22A67F99340A536A8A69C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C87E8FD3319B4CB037089EB326841250 /* AppLovinMediationVerveCustomNetworkAdapter.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AppLovinMediationVerveCustomNetworkAdapter/AppLovinMediationVerveCustomNetworkAdapter-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AppLovinMediationVerveCustomNetworkAdapter/AppLovinMediationVerveCustomNetworkAdapter-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/AppLovinMediationVerveCustomNetworkAdapter/AppLovinMediationVerveCustomNetworkAdapter.modulemap";
+				PRODUCT_MODULE_NAME = AppLovinMediationVerveCustomNetworkAdapter;
+				PRODUCT_NAME = AppLovinMediationVerveCustomNetworkAdapter;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -2624,7 +2623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2636,10 +2635,11 @@
 			};
 			name = Release;
 		};
-		9BF8B98F0E22A67F99340A536A8A69C4 /* Release */ = {
+		BA631F88C189118AF0CE0359B2E60D1B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C87E8FD3319B4CB037089EB326841250 /* AppLovinMediationVerveCustomNetworkAdapter.release.xcconfig */;
+			baseConfigurationReference = 7ED4663F1F1A8AB85185FF76D3525FEF /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -2649,23 +2649,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AppLovinMediationVerveCustomNetworkAdapter/AppLovinMediationVerveCustomNetworkAdapter-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AppLovinMediationVerveCustomNetworkAdapter/AppLovinMediationVerveCustomNetworkAdapter-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/AppLovinMediationVerveCustomNetworkAdapter/AppLovinMediationVerveCustomNetworkAdapter.modulemap";
-				PRODUCT_MODULE_NAME = AppLovinMediationVerveCustomNetworkAdapter;
-				PRODUCT_NAME = AppLovinMediationVerveCustomNetworkAdapter;
+				MODULEMAP_FILE = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2688,8 +2688,8 @@
 		3BC655D09C141E3A607BEC8258930BF7 /* Build configuration list for PBXNativeTarget "Pods-AppLovin Mediation Waterfall Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6E002EDF5A5F5638DB30729FB3579630 /* Debug */,
-				198CEBA5F5175346BD74BDE8100D9293 /* Release */,
+				8079F3542B007C80EC3311496261E9E3 /* Debug */,
+				BA631F88C189118AF0CE0359B2E60D1B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -2697,8 +2697,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
-				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
