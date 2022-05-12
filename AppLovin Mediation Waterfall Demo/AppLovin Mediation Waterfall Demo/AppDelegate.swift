@@ -15,7 +15,7 @@ import AppLovinSDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Step 3: Setup & Initialize AppLovin SDK
+// Step 3: Setup & Initialize AppLovin SDK
         let settings = ALSdkSettings()
 
         // Optional: Enable built in User Consent Flow
@@ -29,26 +29,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sdk.mediationProvider = "max"
         sdk.initializeSdk { (configuration: ALSdkConfiguration) in }
 
-        // Step 4: Optional Verve HyBid SDK settings
-        // Set COPPA (Optional)
+// Step 4: Optional Verve HyBid SDK settings
+    // Set COPPA (Optional)
         HyBid.setCoppa(false)
-        // Test Mode (Optional)
+    // Test Mode (Optional)
         HyBid.setTestMode(false)
-        // Location Tracking (Optional)
+    // Location Tracking (Optional)
         HyBid.setLocationTracking(true)
-        // HTML/MRAID Interstitial skipOffset (Optional)
+    // HTML/MRAID Interstitial skipOffset (Optional)
         HyBid.setHTMLInterstitialSkipOffset(2)
-        // Video Interstitial skipOffset (Optional)
+    // Video Interstitial skipOffset (Optional)
         HyBid.setVideoInterstitialSkipOffset(5)
-        // Custom Click Behavior (Optional)
+    // Custom Click Behavior (Optional)
         HyBid.setInterstitialActionBehaviour(HB_CREATIVE)
-        // 1st party user data Targeting (Optional)
+    // 1st party user data Targeting (Optional)
         let targeting = HyBidTargetingModel()
         targeting.age = 28
         targeting.interests = ["music"]
         targeting.gender = "f"     // "f" for female, "m" for male
         HyBid.setTargeting(targeting)
-        // Set HyBid log level (Optional)
+    // SKOverlay for Interstitial (Optional)
+        HyBid.setInterstitialSKOverlay(true)
+    // SKOverlay for Rewarded (Optional)
+        HyBid.setRewardedSKOverlay(true)
+    // Set HyBid log level (Optional)
         HyBidLogger.setLogLevel(HyBidLogLevelDebug)
         return true
     }
