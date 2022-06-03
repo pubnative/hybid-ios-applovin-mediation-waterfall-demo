@@ -5,7 +5,7 @@ This application makes use of the following third party libraries:
 
 MIT License
 
-Copyright (c) 2021 PubNative GmbH
+Copyright (c) 2022 PubNative GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -39,7 +39,7 @@ The AppLovin SDK is available under a commercial license (https://www.applovin.c
 
 MIT License
 
-Copyright (c) 2021 PubNative GmbH
+Copyright (c) 2022 PubNative GmbH
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

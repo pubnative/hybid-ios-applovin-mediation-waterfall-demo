@@ -563,7 +563,6 @@
 		0BE73F9C7EF0F179D556D09D53A4E656 /* Pods-AppLovin Mediation Waterfall Demo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppLovin Mediation Waterfall Demo-frameworks.sh"; sourceTree = "<group>"; };
 		0C8EA1730FA3E0ABAFC45A4789602027 /* PNLiteAdFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLiteAdFactory.h; path = "PubnativeLite/PubnativeLite/Core/Ad Request/PNLiteAdFactory.h"; sourceTree = "<group>"; };
 		0C9E9684A615C491B758E3DF71ABF22E /* HyBidVASTAdType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTAdType.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTAdType.h"; sourceTree = "<group>"; };
-		0D4ABB8AA4AF2F50293B23FE656FD8F1 /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.3.3/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
 		0D4F76A90C7F403F5D5EFDDCF86C78FC /* HyBidVASTVideoClicks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTVideoClicks.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTVideoClicks.h"; sourceTree = "<group>"; };
 		0DB88619DAE73C6A4982DAA75139A159 /* HyBidXMLDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidXMLDictionary.h; path = PubnativeLite/PubnativeLite/Core/Utils/HyBidXMLDictionary.h; sourceTree = "<group>"; };
 		0DE8F1FE34AA823C47636AC4275CBFE5 /* HyBidVGIModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVGIModel.h; path = "PubnativeLite/PubnativeLite/Core/Ad Model/VGI ID/HyBidVGIModel.h"; sourceTree = "<group>"; };
@@ -574,6 +573,7 @@
 		10D5E943FC218C7DF1F1B46F65F22DC6 /* HyBidBannerAdRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidBannerAdRequest.h; path = "PubnativeLite/PubnativeLite/Banner/Ad Request/HyBidBannerAdRequest.h"; sourceTree = "<group>"; };
 		111343DE6907ADB260F4918484B82309 /* HyBidVisibilityTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVisibilityTracker.h; path = PubnativeLite/PubnativeLite/Core/Tracking/HyBidVisibilityTracker.h; sourceTree = "<group>"; };
 		115B77D44FE6C4393763FF0DB2ADEB50 /* HyBidVASTVerification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTVerification.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTVerification.h"; sourceTree = "<group>"; };
+		12543E103F9961A2F8404CC1B5F99AB6 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.4.1/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		125D0AA2FC3AEAEC3F8342B06B4692A8 /* PNLiteReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLiteReachability.h; path = PubnativeLite/PubnativeLite/Core/Network/PNLiteReachability.h; sourceTree = "<group>"; };
 		12F003B488EF2B83726D01D64526A4E5 /* HyBidAuction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidAuction.h; path = PubnativeLite/PubnativeLite/Core/Auction/HyBidAuction.h; sourceTree = "<group>"; };
 		14FB40F96B5C8B68021E502926C37CC4 /* HyBidVGIGgl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVGIGgl.h; path = "PubnativeLite/PubnativeLite/Core/Ad Model/VGI ID/HyBidVGIGgl.h"; sourceTree = "<group>"; };
@@ -583,6 +583,7 @@
 		174D9E0E45FD7DA4968467E50272F5F3 /* HyBidMRectAdView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidMRectAdView.h; path = PubnativeLite/PubnativeLite/Banner/MRect/HyBidMRectAdView.h; sourceTree = "<group>"; };
 		179CA29A0F4B07533AA3F52338B802E4 /* Pods-AppLovin Mediation Waterfall Demo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppLovin Mediation Waterfall Demo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		183FE8AD2034513DB0A182835A67134D /* PNLiteCryptoUtils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLiteCryptoUtils.m; path = PubnativeLite/PubnativeLite/Core/Utils/Crypto/PNLiteCryptoUtils.m; sourceTree = "<group>"; };
+		19730CB5B52C9BBE77D189C907AEA46C /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.4.1/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
 		198F5AE89A31037067E0A8CE13090473 /* HyBidVASTMediaFilePicker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTMediaFilePicker.m; path = PubnativeLite/PubnativeLite/Core/VAST/HyBidVASTMediaFilePicker.m; sourceTree = "<group>"; };
 		19CA17CB69338AAD782D428F91C30B58 /* HyBidVASTIconClickTracking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTIconClickTracking.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTIconClickTracking.h"; sourceTree = "<group>"; };
 		1AD55553832A92F37F0D3E485E5925A2 /* PNLiteMRAIDBannerPresenter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLiteMRAIDBannerPresenter.m; path = "PubnativeLite/PubnativeLite/Core/Ad Presenter/PNLiteMRAIDBannerPresenter.m"; sourceTree = "<group>"; };
@@ -724,7 +725,6 @@
 		671B20FD5E89BF0EBCF975C106E843D0 /* HyBidReportingEndpoints.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidReportingEndpoints.h; path = PubnativeLite/PubnativeLite/Core/Anayltics/HyBidReportingEndpoints.h; sourceTree = "<group>"; };
 		675A27D7EACF55D37429F99835496604 /* hybidmraidscaling.js */ = {isa = PBXFileReference; includeInIndex = 1; name = hybidmraidscaling.js; path = PubnativeLite/PubnativeLite/Core/MRAID/hybidmraidscaling.js; sourceTree = "<group>"; };
 		68051BF5AB00568655D5FCC97C7F01C4 /* HyBidVASTIconViewTracking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTIconViewTracking.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTIconViewTracking.h"; sourceTree = "<group>"; };
-		680F880D36B20A3402501ACDFC4C9114 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.3.3/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		682D7B292359A519AB3ECBAF3A7E5F9C /* HyBidVASTTracking.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTTracking.m; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/Tracking/HyBidVASTTracking.m"; sourceTree = "<group>"; };
 		690944D12F202CA16AA205D90D4F55EE /* HyBidSkAdNetworkRequestModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidSkAdNetworkRequestModel.m; path = "PubnativeLite/PubnativeLite/Core/Ad Model/HyBidSkAdNetworkRequestModel.m"; sourceTree = "<group>"; };
 		692FE55F4A21E97B46038C986574C417 /* HyBidVASTModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTModel.m; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTModel.m"; sourceTree = "<group>"; };
@@ -1491,6 +1491,14 @@
 			path = "../Target Support Files/AppLovinMediationVerveCustomNetworkAdapter";
 			sourceTree = "<group>";
 		};
+		2C18B92D831071EA3DF724FFB61BBBD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				12543E103F9961A2F8404CC1B5F99AB6 /* AppLovinSDKResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		479587E1345BA99CA5C93B916CA1F333 /* FullScreen */ = {
 			isa = PBXGroup;
 			children = (
@@ -1601,22 +1609,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A3029A0EC664A0441E3FFD634F572A18 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				680F880D36B20A3402501ACDFC4C9114 /* AppLovinSDKResources.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		AC2C458830E107A5E25CD378C66E211E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				0D4ABB8AA4AF2F50293B23FE656FD8F1 /* AppLovinSDK.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		B4EB4246F151DB4E8DB04D00C7B94F51 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1714,6 +1706,14 @@
 			path = "../Target Support Files/AppLovinSDK";
 			sourceTree = "<group>";
 		};
+		EC6AE62E79B98455F6247BDE77962BC5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				19730CB5B52C9BBE77D189C907AEA46C /* AppLovinSDK.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9681D5A8A102055E48DF2571BA43592 /* AppLovinMediationVerveCustomNetworkAdapter */ = {
 			isa = PBXGroup;
 			children = (
@@ -1728,8 +1728,8 @@
 		FC45AA78520259F2583D68EA0E208CFF /* AppLovinSDK */ = {
 			isa = PBXGroup;
 			children = (
-				AC2C458830E107A5E25CD378C66E211E /* Frameworks */,
-				A3029A0EC664A0441E3FFD634F572A18 /* Resources */,
+				EC6AE62E79B98455F6247BDE77962BC5 /* Frameworks */,
+				2C18B92D831071EA3DF724FFB61BBBD7 /* Resources */,
 				E4C935698CFE81FE5D7A2B7AFAC00927 /* Support Files */,
 			);
 			name = AppLovinSDK;
