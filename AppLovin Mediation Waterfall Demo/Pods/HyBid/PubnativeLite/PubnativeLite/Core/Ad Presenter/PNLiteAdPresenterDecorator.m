@@ -23,11 +23,18 @@
 #import "PNLiteAdPresenterDecorator.h"
 #import "HyBidViewabilityAdSession.h"
 #import "HyBid.h"
-#import "PNLiteAssetGroupType.h"
 #import <StoreKit/SKOverlay.h>
 #import <StoreKit/SKOverlayConfiguration.h>
 #import "UIApplication+PNLiteTopViewController.h"
 #import "PNLiteImpressionTracker.h"
+
+#if __has_include(<HyBid/HyBid-Swift.h>)
+    #import <UIKit/UIKit.h>
+    #import <HyBid/HyBid-Swift.h>
+#else
+    #import <UIKit/UIKit.h>
+    #import "HyBid-Swift.h"
+#endif
 
 @interface PNLiteAdPresenterDecorator () <SKOverlayDelegate, PNLiteImpressionTrackerDelegate>
 
@@ -222,11 +229,11 @@ NSString * const kUserDefaultsHyBidCurrentBannerPresenterDecoratorKey = @"kUserD
 }
 
 - (void)adPresenterDidAppear:(HyBidAdPresenter *)adPresenter {
-    [self presentSKOverlay];
+    
 }
 
 - (void)adPresenterDidDisappear:(HyBidAdPresenter *)adPresenter {
-    [self dismissSKOverlay];
+    
 }
 
 #pragma mark SKOverlayDelegate

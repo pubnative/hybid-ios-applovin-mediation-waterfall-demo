@@ -23,16 +23,23 @@
 #import "PNLiteInterstitialPresenterDecorator.h"
 #import "HyBidViewabilityAdSession.h"
 #import "HyBid.h"
-#import "PNLiteAssetGroupType.h"
 #import <StoreKit/SKOverlay.h>
 #import <StoreKit/SKOverlayConfiguration.h>
 #import "UIApplication+PNLiteTopViewController.h"
+
+#if __has_include(<HyBid/HyBid-Swift.h>)
+    #import <UIKit/UIKit.h>
+    #import <HyBid/HyBid-Swift.h>
+#else
+    #import <UIKit/UIKit.h>
+    #import "HyBid-Swift.h"
+#endif
 
 @interface PNLiteInterstitialPresenterDecorator() <SKOverlayDelegate>
 
 @property (nonatomic, strong) HyBidInterstitialPresenter *interstitialPresenter;
 @property (nonatomic, strong) HyBidAdTracker *adTracker;
-@property (nonatomic, weak) NSObject<HyBidInterstitialPresenterDelegate> *interstitialPresenterDelegate;
+@property (nonatomic) NSObject<HyBidInterstitialPresenterDelegate> *interstitialPresenterDelegate;
 @property (nonatomic, strong) NSMutableDictionary *errorReportingProperties;
 @property (nonatomic, strong) SKOverlay *overlay API_AVAILABLE(ios(14.0));
 @property (nonatomic, assign) BOOL isOverlayShown;
@@ -194,11 +201,11 @@
 }
 
 - (void)interstitialPresenterDidAppear:(HyBidInterstitialPresenter *)interstitialPresenter {
-    [self presentSKOverlay];
+    
 }
 
 - (void)interstitialPresenterDidDisappear:(HyBidInterstitialPresenter *)interstitialPresenter {
-    [self dismissSKOverlay];
+    
 }
 
 #pragma mark SKOverlayDelegate

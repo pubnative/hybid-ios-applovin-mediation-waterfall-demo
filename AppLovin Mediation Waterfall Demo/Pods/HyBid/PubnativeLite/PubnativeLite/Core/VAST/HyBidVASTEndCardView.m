@@ -30,6 +30,14 @@
 #import <UIKit/UIKit.h>
 #import <WebKit/WebKit.h>
 
+#if __has_include(<HyBid/HyBid-Swift.h>)
+    #import <UIKit/UIKit.h>
+    #import <HyBid/HyBid-Swift.h>
+#else
+    #import <UIKit/UIKit.h>
+    #import "HyBid-Swift.h"
+#endif
+
 #define kCloseButtonSize 26
 #define kContentInfoContainerTag 2343
 

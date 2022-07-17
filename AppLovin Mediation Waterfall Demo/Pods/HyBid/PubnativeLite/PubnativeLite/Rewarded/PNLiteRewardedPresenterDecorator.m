@@ -23,16 +23,23 @@
 #import "PNLiteRewardedPresenterDecorator.h"
 #import "HyBidViewabilityAdSession.h"
 #import "HyBid.h"
-#import "PNLiteAssetGroupType.h"
 #import <StoreKit/SKOverlay.h>
 #import <StoreKit/SKOverlayConfiguration.h>
 #import "UIApplication+PNLiteTopViewController.h"
+
+#if __has_include(<HyBid/HyBid-Swift.h>)
+    #import <UIKit/UIKit.h>
+    #import <HyBid/HyBid-Swift.h>
+#else
+    #import <UIKit/UIKit.h>
+    #import "HyBid-Swift.h"
+#endif
 
 @interface PNLiteRewardedPresenterDecorator() <SKOverlayDelegate>
 
 @property (nonatomic, strong) HyBidRewardedPresenter *rewardedPresenter;
 @property (nonatomic, strong) HyBidAdTracker *adTracker;
-@property (nonatomic, weak) NSObject<HyBidRewardedPresenterDelegate> *rewardedPresenterDelegate;
+@property (nonatomic) NSObject<HyBidRewardedPresenterDelegate> *rewardedPresenterDelegate;
 @property (nonatomic, strong) NSMutableDictionary *errorReportingProperties;
 @property (nonatomic, strong) SKOverlay *overlay API_AVAILABLE(ios(14.0));
 @property (nonatomic, assign) BOOL isOverlayShown;
@@ -201,11 +208,11 @@
 }
 
 - (void)rewardedPresenterDidAppear:(HyBidRewardedPresenter *)rewardedPresenter {
-    [self presentSKOverlay];
+    
 }
 
 - (void)rewardedPresenterDidDisappear:(HyBidRewardedPresenter *)rewardedPresenter {
-    [self dismissSKOverlay];
+    
 }
 
 #pragma mark SKOverlayDelegate

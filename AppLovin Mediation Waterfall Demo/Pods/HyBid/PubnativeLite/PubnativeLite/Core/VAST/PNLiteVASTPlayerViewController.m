@@ -27,12 +27,10 @@
 #import "HyBidVASTMediaFilePicker.h"
 #import "PNLiteProgressLabel.h"
 #import "UIApplication+PNLiteTopViewController.h"
-#import "HyBidLogger.h"
 #import "HyBidViewabilityNativeVideoAdSession.h"
 #import <OMSDK_Pubnativenet/OMIDAdSession.h>
 #import "HyBidAd.h"
 #import "HyBidSKAdNetworkViewController.h"
-#import "HyBidSettings.h"
 #import "HyBidURLDriller.h"
 #import "HyBidError.h"
 #import "HyBid.h"
@@ -44,6 +42,14 @@
 #import <StoreKit/SKOverlay.h>
 
 #define kContentInfoContainerTag 2343
+
+#if __has_include(<HyBid/HyBid-Swift.h>)
+    #import <UIKit/UIKit.h>
+    #import <HyBid/HyBid-Swift.h>
+#else
+    #import <UIKit/UIKit.h>
+    #import "HyBid-Swift.h"
+#endif
 
 NSString * const PNLiteVASTPlayerStatusKeyPath         = @"status";
 NSString * const PNLiteVASTPlayerBundleName            = @"player.resources";
@@ -236,6 +242,8 @@ typedef enum : NSUInteger {
             [self.contentInfoViewContainer addSubview:contentInfoView];
             self.contentInfoViewContainer.tag = kContentInfoContainerTag;
             contentInfoView.delegate = self;
+            
+            [self.contentInfoViewContainer setIsAccessibilityElement:NO];
             
             if (contentInfoViewFromIcon != nil && contentInfoViewFromIcon.viewTrackers != nil && [contentInfoViewFromIcon.viewTrackers count] > 0) {
                 NSMutableArray *stringViewTrackers = [NSMutableArray new];
@@ -924,20 +932,18 @@ typedef enum : NSUInteger {
                     weakSelf.hyBidVastModel = model;
                     [self fetchEndCards];
                         
-                    if (weakSelf.hyBidVastModel.ads.count > 0) {
-                        if(!mediaUrl) {
-                            [HyBidLogger errorLogFromClass:NSStringFromClass([self class]) fromMethod:NSStringFromSelector(_cmd) withMessage:@"Did not find a compatible media file."];
-                            NSError *mediaNotFoundError = [NSError errorWithDomain:@"Not found compatible media with this device." code:HyBidErrorCodeInternal userInfo:nil];
-                            [weakSelf invokeDidFailLoadingWithError:mediaNotFoundError];
-                        } else {
-                            NSURL *url = [[NSURL alloc] initWithString:mediaUrl];
-                            [weakSelf createVideoPlayerWithVideoUrl:url];
-                        }
+                    if(!mediaUrl) {
+                        [HyBidLogger errorLogFromClass:NSStringFromClass([self class]) fromMethod:NSStringFromSelector(_cmd) withMessage:@"Did not find a compatible media file."];
+                        NSError *mediaNotFoundError = [NSError errorWithDomain:@"Not found compatible media with this device." code:HyBidErrorCodeInternal userInfo:nil];
+                        [weakSelf invokeDidFailLoadingWithError:mediaNotFoundError];
                     } else {
-                        [HyBidLogger errorLogFromClass:NSStringFromClass([self class]) fromMethod:NSStringFromSelector(_cmd) withMessage:@"VAST does not contain any ads."];
-                        NSError *noAdFoundError = [NSError errorWithDomain:@"VAST does not contain any ads." code:HyBidErrorCodeNullAd userInfo:nil];
-                        [weakSelf invokeDidFailLoadingWithError:noAdFoundError];
+                        NSURL *url = [[NSURL alloc] initWithString:mediaUrl];
+                        [weakSelf createVideoPlayerWithVideoUrl:url];
                     }
+                } else {
+                    [HyBidLogger errorLogFromClass:NSStringFromClass([self class]) fromMethod:NSStringFromSelector(_cmd) withMessage:@"VAST does not contain any ads."];
+                    NSError *noAdFoundError = [NSError errorWithDomain:@"VAST does not contain any ads." code:HyBidErrorCodeNullAd userInfo:nil];
+                    [weakSelf invokeDidFailLoadingWithError:noAdFoundError];
                 }
             }
         };
