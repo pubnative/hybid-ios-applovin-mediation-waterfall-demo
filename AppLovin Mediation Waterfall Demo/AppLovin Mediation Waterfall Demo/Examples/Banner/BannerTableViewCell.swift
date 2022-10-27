@@ -24,7 +24,6 @@ class BannerTableViewCell: UITableViewCell {
     //MARK: - Variables
     var state: BannerState! = .initialized {
         didSet {
-            print("************** estado ", state)
             switch(state){
             case .initialized:
                 bannerContainerView.isHidden = true

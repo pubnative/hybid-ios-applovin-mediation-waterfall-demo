@@ -24,6 +24,7 @@
 		913E9A4829092E5800DD1853 /* BannerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4729092E5800DD1853 /* BannerTableViewController.swift */; };
 		913E9A4A29093EC300DD1853 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4929093EC300DD1853 /* QuoteTableViewCell.swift */; };
 		913E9A4C2909455D00DD1853 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4B2909455D00DD1853 /* BannerTableViewCell.swift */; };
+		91545480290A8C6900C87085 /* BannerScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9154547F290A8C6900C87085 /* BannerScrollViewController.swift */; };
 		925E50AB273973C94276B6C5 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		913E9A4729092E5800DD1853 /* BannerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewController.swift; sourceTree = "<group>"; };
 		913E9A4929093EC300DD1853 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
 		913E9A4B2909455D00DD1853 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
+		9154547F290A8C6900C87085 /* BannerScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerScrollViewController.swift; sourceTree = "<group>"; };
 		AB4569BDF16E3FAAC4CE8CD1 /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig"; path = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D6E51C4E3CADE4E9AD08A05E /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin Mediation Waterfall Demo.release.xcconfig"; path = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				344C8A2E27DB6CB0000B9C6F /* Banner.swift */,
+				9154547F290A8C6900C87085 /* BannerScrollViewController.swift */,
 				913E9A4729092E5800DD1853 /* BannerTableViewController.swift */,
 				913E9A4929093EC300DD1853 /* QuoteTableViewCell.swift */,
 				913E9A4B2909455D00DD1853 /* BannerTableViewCell.swift */,
@@ -306,6 +309,7 @@
 				344C8A3327DB7635000B9C6F /* Interstitial.swift in Sources */,
 				344C8A3127DB70C9000B9C6F /* MRect.swift in Sources */,
 				913E9A4A29093EC300DD1853 /* QuoteTableViewCell.swift in Sources */,
+				91545480290A8C6900C87085 /* BannerScrollViewController.swift in Sources */,
 				913E69DD29082DE9007DD827 /* DebugMainViewController.swift in Sources */,
 				344C8A1927DB5F57000B9C6F /* SceneDelegate.swift in Sources */,
 				344C8A2F27DB6CB0000B9C6F /* Banner.swift in Sources */,

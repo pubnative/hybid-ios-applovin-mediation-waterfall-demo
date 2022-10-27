@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="90.769230769230759" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="185" y="-34"/>
         </scene>
         <!--AppLovin Mediation Banner-->
         <scene sceneID="lRo-2X-bsi">
@@ -137,7 +137,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="fkV-bo-01I" kind="show" id="kEu-zh-swa"/>
+                                    <segue destination="fkV-bo-01I" kind="popoverPresentation" popoverAnchorView="zf4-xo-P8w" id="kEu-zh-swa">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,7 +194,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="fkV-bo-01I" kind="show" id="lvx-KD-beR"/>
+                                    <segue destination="fkV-bo-01I" kind="popoverPresentation" popoverAnchorView="GXx-gC-XaA" id="lvx-KD-beR">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4av-vA-pU3">
@@ -313,7 +317,6 @@
                     <navigationItem key="navigationItem" id="RHp-jv-MCO"/>
                     <connections>
                         <outlet property="debugButton" destination="GXx-gC-XaA" id="70h-jy-f0v"/>
-                        <outlet property="quotesTableView" destination="J9J-Nw-pPK" id="mz3-Cc-eGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bKS-LZ-ZbM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -328,12 +331,12 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1H8-Nk-ibE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="185" y="1155"/>
+            <point key="canvasLocation" x="185" y="1160"/>
         </scene>
-        <!--View Controller-->
+        <!--Banner Scroll View Controller-->
         <scene sceneID="qWt-sG-rmW">
             <objects>
-                <viewController id="IoU-p2-W6Y" sceneMemberID="viewController">
+                <viewController id="IoU-p2-W6Y" customClass="BannerScrollViewController" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kH2-bE-8CD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -351,26 +354,15 @@
                                 <connections>
                                     <action selector="loadAdTouchUpInside:" destination="Rh4-d9-EOg" eventType="touchUpInside" id="Ax7-41-cqa"/>
                                     <action selector="loadBanner:" destination="Bkb-Nw-mn8" eventType="touchUpInside" id="GVf-F2-mO7"/>
+                                    <action selector="loadBanner:" destination="IoU-p2-W6Y" eventType="touchUpInside" id="bae-kb-N3v"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-1O-Jw5">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eBb-1O-Jw5">
                                 <rect key="frame" x="16" y="96" width="358" height="616"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffX-v7-6fj">
-                                        <rect key="frame" x="19" y="283" width="320" height="50"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="320" id="P9H-DB-U3Y"/>
-                                            <constraint firstAttribute="height" constant="50" id="X2V-2I-xHL"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="ffX-v7-6fj" firstAttribute="centerY" secondItem="eBb-1O-Jw5" secondAttribute="centerY" id="X0O-0z-tSv"/>
-                                    <constraint firstItem="ffX-v7-6fj" firstAttribute="centerX" secondItem="eBb-1O-Jw5" secondAttribute="centerX" id="b0H-NM-7Tp"/>
-                                </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="b1h-3p-lBc"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="9Bg-rm-PW5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="delegate" destination="IoU-p2-W6Y" id="9M9-l8-UNU"/>
+                                </connections>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecQ-H2-8Tl" userLabel="Dismiss Button">
                                 <rect key="frame" x="16" y="720" width="358" height="33"/>
@@ -390,7 +382,9 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="fkV-bo-01I" kind="show" id="mH0-Id-JAg"/>
+                                    <segue destination="fkV-bo-01I" kind="popoverPresentation" popoverAnchorView="ecQ-H2-8Tl" id="mH0-Id-JAg">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,18 +392,22 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4uy-Rs-lKu" firstAttribute="bottom" secondItem="ecQ-H2-8Tl" secondAttribute="bottom" constant="34" id="2Gf-uI-2L0"/>
-                            <constraint firstItem="eBb-1O-Jw5" firstAttribute="leading" secondItem="4uy-Rs-lKu" secondAttribute="leading" constant="16" id="3TQ-LG-B7Q"/>
-                            <constraint firstItem="4uy-Rs-lKu" firstAttribute="trailing" secondItem="eBb-1O-Jw5" secondAttribute="trailing" constant="16" id="QJD-Y6-Psb"/>
+                            <constraint firstItem="eBb-1O-Jw5" firstAttribute="top" secondItem="xaw-ja-Pnz" secondAttribute="bottom" constant="8" symbolic="YES" id="8w5-tx-DEE"/>
+                            <constraint firstItem="eBb-1O-Jw5" firstAttribute="leading" secondItem="4uy-Rs-lKu" secondAttribute="leading" constant="16" id="HVq-VQ-d9A"/>
                             <constraint firstItem="4uy-Rs-lKu" firstAttribute="trailing" secondItem="xaw-ja-Pnz" secondAttribute="trailing" constant="16" id="RON-98-1SX"/>
                             <constraint firstItem="ecQ-H2-8Tl" firstAttribute="leading" secondItem="4uy-Rs-lKu" secondAttribute="leading" constant="16" id="V8L-VP-tnQ"/>
+                            <constraint firstItem="4uy-Rs-lKu" firstAttribute="trailing" secondItem="eBb-1O-Jw5" secondAttribute="trailing" constant="16" id="Yci-aG-gtm"/>
                             <constraint firstItem="xaw-ja-Pnz" firstAttribute="top" secondItem="4uy-Rs-lKu" secondAttribute="top" constant="8" id="baz-uU-ng4"/>
-                            <constraint firstItem="eBb-1O-Jw5" firstAttribute="top" secondItem="xaw-ja-Pnz" secondAttribute="bottom" constant="8" symbolic="YES" id="gfv-xY-wM5"/>
+                            <constraint firstItem="ecQ-H2-8Tl" firstAttribute="top" secondItem="eBb-1O-Jw5" secondAttribute="bottom" constant="8" symbolic="YES" id="dVZ-Wv-eHp"/>
                             <constraint firstItem="xaw-ja-Pnz" firstAttribute="leading" secondItem="4uy-Rs-lKu" secondAttribute="leading" constant="16" id="oKl-08-ZhD"/>
                             <constraint firstItem="4uy-Rs-lKu" firstAttribute="trailing" secondItem="ecQ-H2-8Tl" secondAttribute="trailing" constant="16" id="rX7-ek-VZu"/>
-                            <constraint firstItem="ecQ-H2-8Tl" firstAttribute="top" secondItem="eBb-1O-Jw5" secondAttribute="bottom" constant="8" symbolic="YES" id="wa6-Bq-ChG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kDD-lE-x7g"/>
+                    <connections>
+                        <outlet property="bannerScrollVew" destination="eBb-1O-Jw5" id="R3G-Ti-MGs"/>
+                        <outlet property="debugButton" destination="ecQ-H2-8Tl" id="Mi2-9x-S4K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6L-6d-eKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -417,7 +415,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="mH0-Id-JAg"/>
+        <segue reference="lvx-KD-beR"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

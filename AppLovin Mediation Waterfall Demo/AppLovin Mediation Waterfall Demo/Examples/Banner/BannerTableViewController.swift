@@ -16,7 +16,6 @@ protocol SetBannerState {
 class BannerTableViewController: UIViewController {
     
     // MARK: - Outlets
-    @IBOutlet weak var quotesTableView: UITableView!
     @IBOutlet weak var debugButton: UIButton!
     
     // MARK: - Variables
@@ -68,6 +67,8 @@ class BannerTableViewController: UIViewController {
         bannerState = .loading
     }
 }
+
+// MARK: - Banner delegate
 
 extension BannerTableViewController: MAAdViewAdDelegate {
     
@@ -146,7 +147,6 @@ extension BannerTableViewController: UITableViewDelegate, UITableViewDataSource 
 }
 
 // MARK: - Data
-
 
 extension BannerTableViewController {
     
