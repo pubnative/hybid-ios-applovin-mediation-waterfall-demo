@@ -17,6 +17,13 @@
 		344C8A3127DB70C9000B9C6F /* MRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A3027DB70C9000B9C6F /* MRect.swift */; };
 		344C8A3327DB7635000B9C6F /* Interstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A3227DB7635000B9C6F /* Interstitial.swift */; };
 		344C8A3527DB7C68000B9C6F /* Rewarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A3427DB7C68000B9C6F /* Rewarded.swift */; };
+		913E69D829082C3D007DD827 /* Debug.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913E69D729082C3D007DD827 /* Debug.storyboard */; };
+		913E69DD29082DE9007DD827 /* DebugMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E69DC29082DE9007DD827 /* DebugMainViewController.swift */; };
+		913E9A422908432D00DD1853 /* Banner.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 913E9A412908432D00DD1853 /* Banner.storyboard */; };
+		913E9A4629092DD600DD1853 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4529092DD600DD1853 /* Quote.swift */; };
+		913E9A4829092E5800DD1853 /* BannerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4729092E5800DD1853 /* BannerTableViewController.swift */; };
+		913E9A4A29093EC300DD1853 /* QuoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4929093EC300DD1853 /* QuoteTableViewCell.swift */; };
+		913E9A4C2909455D00DD1853 /* BannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E9A4B2909455D00DD1853 /* BannerTableViewCell.swift */; };
 		925E50AB273973C94276B6C5 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +41,13 @@
 		344C8A3227DB7635000B9C6F /* Interstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interstitial.swift; sourceTree = "<group>"; };
 		344C8A3427DB7C68000B9C6F /* Rewarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rewarded.swift; sourceTree = "<group>"; };
 		8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovin_Mediation_Waterfall_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		913E69D729082C3D007DD827 /* Debug.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Debug.storyboard; sourceTree = "<group>"; };
+		913E69DC29082DE9007DD827 /* DebugMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugMainViewController.swift; sourceTree = "<group>"; };
+		913E9A412908432D00DD1853 /* Banner.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Banner.storyboard; sourceTree = "<group>"; };
+		913E9A4529092DD600DD1853 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
+		913E9A4729092E5800DD1853 /* BannerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewController.swift; sourceTree = "<group>"; };
+		913E9A4929093EC300DD1853 /* QuoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteTableViewCell.swift; sourceTree = "<group>"; };
+		913E9A4B2909455D00DD1853 /* BannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerTableViewCell.swift; sourceTree = "<group>"; };
 		AB4569BDF16E3FAAC4CE8CD1 /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig"; path = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		D6E51C4E3CADE4E9AD08A05E /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin Mediation Waterfall Demo.release.xcconfig"; path = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,7 +99,9 @@
 		344C8A2A27DB6213000B9C6F /* Examples */ = {
 			isa = PBXGroup;
 			children = (
-				344C8A2E27DB6CB0000B9C6F /* Banner.swift */,
+				913E9A4429092DC300DD1853 /* Model */,
+				913E9A4329092DAD00DD1853 /* Banner */,
+				913E69D929082DB3007DD827 /* Debug */,
 				344C8A3027DB70C9000B9C6F /* MRect.swift */,
 				344C8A3227DB7635000B9C6F /* Interstitial.swift */,
 				344C8A3427DB7C68000B9C6F /* Rewarded.swift */,
@@ -98,6 +114,8 @@
 			children = (
 				344C8A1C27DB5F57000B9C6F /* Main.storyboard */,
 				344C8A2C27DB6838000B9C6F /* AppLovinMediation.storyboard */,
+				913E69D729082C3D007DD827 /* Debug.storyboard */,
+				913E9A412908432D00DD1853 /* Banner.storyboard */,
 			);
 			path = "Storyboards and Xibs";
 			sourceTree = "<group>";
@@ -117,6 +135,33 @@
 				8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		913E69D929082DB3007DD827 /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				913E69DC29082DE9007DD827 /* DebugMainViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
+		913E9A4329092DAD00DD1853 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				344C8A2E27DB6CB0000B9C6F /* Banner.swift */,
+				913E9A4729092E5800DD1853 /* BannerTableViewController.swift */,
+				913E9A4929093EC300DD1853 /* QuoteTableViewCell.swift */,
+				913E9A4B2909455D00DD1853 /* BannerTableViewCell.swift */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		913E9A4429092DC300DD1853 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				913E9A4529092DD600DD1853 /* Quote.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				344C8A2327DB5F58000B9C6F /* LaunchScreen.storyboard in Resources */,
+				913E69D829082C3D007DD827 /* Debug.storyboard in Resources */,
+				913E9A422908432D00DD1853 /* Banner.storyboard in Resources */,
 				344C8A2027DB5F58000B9C6F /* Assets.xcassets in Resources */,
 				344C8A2D27DB6838000B9C6F /* AppLovinMediation.storyboard in Resources */,
 				344C8A1E27DB5F57000B9C6F /* Main.storyboard in Resources */,
@@ -253,12 +300,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				913E9A4C2909455D00DD1853 /* BannerTableViewCell.swift in Sources */,
+				913E9A4629092DD600DD1853 /* Quote.swift in Sources */,
 				344C8A1727DB5F57000B9C6F /* AppDelegate.swift in Sources */,
 				344C8A3327DB7635000B9C6F /* Interstitial.swift in Sources */,
 				344C8A3127DB70C9000B9C6F /* MRect.swift in Sources */,
+				913E9A4A29093EC300DD1853 /* QuoteTableViewCell.swift in Sources */,
+				913E69DD29082DE9007DD827 /* DebugMainViewController.swift in Sources */,
 				344C8A1927DB5F57000B9C6F /* SceneDelegate.swift in Sources */,
 				344C8A2F27DB6CB0000B9C6F /* Banner.swift in Sources */,
 				344C8A3527DB7C68000B9C6F /* Rewarded.swift in Sources */,
+				913E9A4829092E5800DD1853 /* BannerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,13 +11,13 @@ class Banner: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var adView: MAAdView!
-    let adUnitID = "fd30fd06782c6796"
+    static let adUnitID = "fd30fd06782c6796"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "AppLovin Mediation Banner"
         
-        adView = MAAdView(adUnitIdentifier: adUnitID)
+        adView = MAAdView(adUnitIdentifier: Banner.adUnitID)
         adView.delegate = self
         adView.frame = CGRect(x: 0, y: 0, width: bannerAdContainer.frame.size.width, height: bannerAdContainer.frame.size.height)
         adView.backgroundColor = UIColor.clear
