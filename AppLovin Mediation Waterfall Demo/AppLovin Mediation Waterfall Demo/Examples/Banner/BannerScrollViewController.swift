@@ -25,10 +25,10 @@ class BannerScrollViewController: UIViewController {
     
     func prepareElements(){
         
-        let elementSize = CGSize(width: bannerScrollVew.frame.width, height: 160)
-        
+        let cardHeight = 160.0
         var currentYPosition = 0.0
         let standarSpace = 8.0
+        var cards: [Card] = []
         
         for iCont in 0..<quotes.count {
             if iCont == Int(quotes.count / 2) {
@@ -37,17 +37,34 @@ class BannerScrollViewController: UIViewController {
                 adView.frame = CGRect(x: 0, y: currentYPosition, width: 320, height: 50)
                 adView.backgroundColor = UIColor.clear
                 bannerScrollVew.addSubview(adView)
+                
+                adView.translatesAutoresizingMaskIntoConstraints = false
+                adView.centerXAnchor.constraint(equalTo: bannerScrollVew.centerXAnchor).isActive = true
+                let previousElement = iCont == 0 ? bannerScrollVew.topAnchor : cards[iCont-1].bottomAnchor
+                adView.topAnchor.constraint(equalTo: previousElement, constant: standarSpace).isActive = true
+                adView.widthAnchor.constraint(equalTo: bannerScrollVew.widthAnchor).isActive = true
+                adView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+                
                 currentYPosition += (adView.frame.height + standarSpace)
             }
             
-            let card = Card(frame: CGRect(x: 0, y: currentYPosition, width: elementSize.width, height: elementSize.height))
+            let card = Card(frame: CGRect(x: 0, y: 0, width: bannerScrollVew.frame.width, height: cardHeight))
             card.quote = quotes[iCont]
+            
             bannerScrollVew.addSubview(card)
+            cards.append(card)
+
+            card.translatesAutoresizingMaskIntoConstraints = false
+            card.centerXAnchor.constraint(equalTo: bannerScrollVew.centerXAnchor).isActive = true
+            let previousElement = iCont == 0 ? bannerScrollVew.topAnchor : (Int(quotes.count / 2) == iCont ? adView.bottomAnchor : cards[iCont-1].bottomAnchor)
+            card.topAnchor.constraint(equalTo: previousElement, constant: standarSpace).isActive = true
+            card.widthAnchor.constraint(equalTo: bannerScrollVew.widthAnchor).isActive = true
+            card.heightAnchor.constraint(equalToConstant: cardHeight).isActive = true
             
             currentYPosition += (card.frame.height + standarSpace)
         }
         
-        bannerScrollVew.contentSize = CGSize(width: self.view.frame.width, height: currentYPosition)
+        bannerScrollVew.contentSize = CGSize(width: bannerScrollVew.frame.width, height: currentYPosition)
         hiddeDebugbutton(isHidden: true)
     }
     

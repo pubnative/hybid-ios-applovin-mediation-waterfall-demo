@@ -35,22 +35,8 @@
                                             <segue destination="Rh4-d9-EOg" kind="show" id="FOG-gV-nmG"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5D-Rb-ur0">
-                                        <rect key="frame" x="0.0" y="49" width="358" height="33"/>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
-                                        <accessibility key="accessibilityConfiguration" identifier="loadAdButton" label="Load Ad Button"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="33" id="Jw2-sL-kZX"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Scroll view"/>
-                                        <connections>
-                                            <segue destination="IoU-p2-W6Y" kind="show" id="1KY-ch-WQa"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0C-PO-tbC">
-                                        <rect key="frame" x="0.0" y="98" width="358" height="33"/>
+                                        <rect key="frame" x="0.0" y="49" width="358" height="33"/>
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                         <accessibility key="accessibilityConfiguration" identifier="loadAdButton" label="Load Ad Button"/>
                                         <constraints>
@@ -61,6 +47,20 @@
                                         <state key="normal" title="Table view"/>
                                         <connections>
                                             <segue destination="Bkb-Nw-mn8" kind="show" id="HYR-bv-yrm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5D-Rb-ur0">
+                                        <rect key="frame" x="0.0" y="98" width="358" height="33"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="loadAdButton" label="Load Ad Button"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="Jw2-sL-kZX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="thin" pointSize="15"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="Scroll view"/>
+                                        <connections>
+                                            <segue destination="IoU-p2-W6Y" kind="show" id="1KY-ch-WQa"/>
                                         </connections>
                                     </button>
                                 </subviews>
