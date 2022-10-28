@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Scenarios-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController title="Scenarios" id="Y6W-OH-hqX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -82,7 +82,7 @@
         <!--AppLovin Mediation Banner-->
         <scene sceneID="lRo-2X-bsi">
             <objects>
-                <viewController title="AppLovin Mediation Banner" id="Rh4-d9-EOg" userLabel="AppLovin Mediation Banner" customClass="Banner" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="In view Banner" id="Rh4-d9-EOg" userLabel="AppLovin Mediation Banner" customClass="Banner" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="TAD-LD-Rgz"/>
                         <viewControllerLayoutGuide type="bottom" id="yU5-YK-NO1"/>
@@ -158,20 +158,21 @@
                             <constraint firstItem="oKa-0B-hVf" firstAttribute="centerX" secondItem="GaO-Ge-DwN" secondAttribute="centerX" id="tSg-Y5-vls"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="34E-DI-ex4"/>
+                    <navigationItem key="navigationItem" title="In-view Banner" id="34E-DI-ex4"/>
                     <connections>
                         <outlet property="activityIndicator" destination="GUp-yH-u7P" id="bsb-LM-4C1"/>
                         <outlet property="bannerAdContainer" destination="oKa-0B-hVf" id="aiS-EE-R52"/>
+                        <outlet property="debugButton" destination="zf4-xo-P8w" id="YkN-71-Lgj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7G4-4C-7EC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-492.30769230769226" y="699.52606635071083"/>
         </scene>
-        <!--Banner Table View Controller-->
+        <!--Table View Banner-->
         <scene sceneID="l9G-Yg-gra">
             <objects>
-                <viewController id="Bkb-Nw-mn8" customClass="BannerTableViewController" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Table View Banner" id="Bkb-Nw-mn8" customClass="BannerTableViewController" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ttj-fR-JWc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -314,7 +315,7 @@
                             <constraint firstItem="GXx-gC-XaA" firstAttribute="top" secondItem="J9J-Nw-pPK" secondAttribute="bottom" constant="8" symbolic="YES" id="wAI-X7-rhJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="RHp-jv-MCO"/>
+                    <navigationItem key="navigationItem" title="Table View Banner" id="RHp-jv-MCO"/>
                     <connections>
                         <outlet property="debugButton" destination="GXx-gC-XaA" id="70h-jy-f0v"/>
                     </connections>
@@ -333,10 +334,10 @@
             </objects>
             <point key="canvasLocation" x="185" y="1160"/>
         </scene>
-        <!--Banner Scroll View Controller-->
+        <!--Scroll View Banner-->
         <scene sceneID="qWt-sG-rmW">
             <objects>
-                <viewController id="IoU-p2-W6Y" customClass="BannerScrollViewController" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Scroll View Banner" id="IoU-p2-W6Y" customClass="BannerScrollViewController" customModule="AppLovin_Mediation_Waterfall_Demo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kH2-bE-8CD">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -403,7 +404,7 @@
                             <constraint firstItem="4uy-Rs-lKu" firstAttribute="trailing" secondItem="ecQ-H2-8Tl" secondAttribute="trailing" constant="16" id="rX7-ek-VZu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kDD-lE-x7g"/>
+                    <navigationItem key="navigationItem" title="Scroll View Banner" id="kDD-lE-x7g"/>
                     <connections>
                         <outlet property="bannerScrollVew" destination="eBb-1O-Jw5" id="R3G-Ti-MGs"/>
                         <outlet property="debugButton" destination="ecQ-H2-8Tl" id="Mi2-9x-S4K"/>
@@ -415,7 +416,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lvx-KD-beR"/>
+        <segue reference="mH0-Id-JAg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">

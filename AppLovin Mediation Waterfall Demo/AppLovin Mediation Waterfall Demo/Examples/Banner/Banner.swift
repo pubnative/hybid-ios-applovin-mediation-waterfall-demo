@@ -8,6 +8,7 @@ import AppLovinSDK
 class Banner: UIViewController {
     
     @IBOutlet weak var bannerAdContainer: UIView!
+    @IBOutlet weak var debugButton: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var adView: MAAdView!
@@ -15,19 +16,29 @@ class Banner: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "AppLovin Mediation Banner"
         
         adView = MAAdView(adUnitIdentifier: Banner.adUnitID)
         adView.delegate = self
         adView.frame = CGRect(x: 0, y: 0, width: bannerAdContainer.frame.size.width, height: bannerAdContainer.frame.size.height)
         adView.backgroundColor = UIColor.clear
         bannerAdContainer.addSubview(adView)
+        hiddeDebugbutton(isHidden: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        adView.removeFromSuperview()
+    }
+    
+    func hiddeDebugbutton(isHidden: Bool){
+        debugButton.isHidden = isHidden
     }
     
     @IBAction func loadAdTouchUpInside(_ sender: UIButton) {
         activityIndicator.startAnimating()
         bannerAdContainer.isHidden = true
         adView.loadAd()
+        hiddeDebugbutton(isHidden: true)
     }
     
 }
@@ -41,14 +52,17 @@ extension Banner : MAAdDelegate {
     func didLoad(_ ad: MAAd) {
         bannerAdContainer.isHidden = false
         activityIndicator.stopAnimating()
+        hiddeDebugbutton(isHidden: false)
     }
     
     func didFailToLoadAd(forAdUnitIdentifier adUnitIdentifier: String, withError error: MAError) {
         activityIndicator.stopAnimating()
+        hiddeDebugbutton(isHidden: false)
     }
     
     func didFail(toDisplay ad: MAAd, withError error: MAError) {
         activityIndicator.stopAnimating()
+        hiddeDebugbutton(isHidden: false)
     }
     
     func didDisplay(_ ad: MAAd) {}
