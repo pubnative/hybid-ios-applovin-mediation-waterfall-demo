@@ -1,26 +1,26 @@
 PODS:
-  - AppLovinMediationVerveCustomNetworkAdapter (2.16.0.0):
+  - AppLovinMediationVerveCustomNetworkAdapter (2.16.1.0):
     - AppLovinSDK (>= 11.1.2)
-    - HyBid (= 2.16.0)
-  - AppLovinSDK (11.5.0)
-  - HyBid (2.16.0):
-    - HyBid/Banner (= 2.16.0)
-    - HyBid/Core (= 2.16.0)
-    - HyBid/FullScreen (= 2.16.0)
-    - HyBid/Native (= 2.16.0)
-    - HyBid/RewardedVideo (= 2.16.0)
-  - HyBid/Banner (2.16.0):
+    - HyBid (= 2.16.1)
+  - AppLovinSDK (11.5.4)
+  - HyBid (2.16.1):
+    - HyBid/Banner (= 2.16.1)
+    - HyBid/Core (= 2.16.1)
+    - HyBid/FullScreen (= 2.16.1)
+    - HyBid/Native (= 2.16.1)
+    - HyBid/RewardedVideo (= 2.16.1)
+  - HyBid/Banner (2.16.1):
     - HyBid/Core
-  - HyBid/Core (2.16.0)
-  - HyBid/FullScreen (2.16.0):
+  - HyBid/Core (2.16.1)
+  - HyBid/FullScreen (2.16.1):
     - HyBid/Core
-  - HyBid/Native (2.16.0):
+  - HyBid/Native (2.16.1):
     - HyBid/Core
-  - HyBid/RewardedVideo (2.16.0):
+  - HyBid/RewardedVideo (2.16.1):
     - HyBid/Core
 
 DEPENDENCIES:
-  - AppLovinMediationVerveCustomNetworkAdapter (= 2.16.0.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (= 2.16.1.0)
 
 SPEC REPOS:
   trunk:
@@ -29,10 +29,10 @@ SPEC REPOS:
     - HyBid
 
 SPEC CHECKSUMS:
-  AppLovinMediationVerveCustomNetworkAdapter: 49ee0fdfaf545a338a4a288ff555226976413ce2
-  AppLovinSDK: aa7612a10d6356d6fe7eb30ad5b4f25376931fbb
-  HyBid: 9782ffe9966f750c21c7fc89a2c9681888650dd3
+  AppLovinMediationVerveCustomNetworkAdapter: abc699517739bde7084dae1b3c1117e9b13e1789
+  AppLovinSDK: 3f8012a7a553c1ffd83f099719fba8c89ba7dde9
+  HyBid: e5ad176fc16ddad00fdfcc1b0e5986f2bd17e1d2
 
-PODFILE CHECKSUM: bdf456ffd2eb688b1cb8ee307709db5e00ac1a61
+PODFILE CHECKSUM: 86d95b42ff9bd7835f3a3731f9b410c486441fd2
 
 COCOAPODS: 1.11.3
