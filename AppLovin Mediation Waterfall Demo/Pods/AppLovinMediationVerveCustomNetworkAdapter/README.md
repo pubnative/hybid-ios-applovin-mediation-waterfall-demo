@@ -15,9 +15,9 @@ For bidding, please follow the official AppLovin documentation.
 3. [Verve Integration Guide](https://dash.applovin.com/documentation/mediation/ios/mediation-setup/verve#verve-integration-guide)
 
 The most recent SDK versions supported by AppLoving MAX bidding mediation are:
-* AppLovin SDK: [11.4.0](https://github.com/AppLovin/AppLovin-MAX-SDK-iOS/releases)
-* AppLovin Verve bidding adapter: [2.16.1.0](https://github.com/AppLovin/AppLovin-MAX-SDK-iOS/blob/master/Verve/CHANGELOG.md)
-* Verve HyBid SDK: [2.16.1](https://github.com/pubnative/pubnative-hybid-ios-sdk/releases)
+* AppLovin SDK: [11.7.0](https://github.com/AppLovin/AppLovin-MAX-SDK-iOS/releases)
+* AppLovin Verve bidding adapter: [2.18.0.0](https://github.com/AppLovin/AppLovin-MAX-SDK-iOS/blob/master/Verve/CHANGELOG.md)
+* Verve HyBid SDK: [2.18.0](https://github.com/pubnative/pubnative-hybid-ios-sdk/releases)
 
 # Waterfall
 Waterfall mediation is only supported via AppLovin MAX's custom network adapters.
