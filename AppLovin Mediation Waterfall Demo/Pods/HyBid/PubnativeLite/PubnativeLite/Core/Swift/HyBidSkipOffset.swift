@@ -26,6 +26,8 @@ let DEFAULT_VIDEO_SKIP_OFFSET = 10
 let DEFAULT_HTML_SKIP_OFFSET = 3
 let DEFAULT_SKIP_OFFSET_WITHOUT_ENDCARD = 15
 let DEFAULT_END_CARD_CLOSE_OFFSET = 3
+let DEFAULT_REWARDED_VIDEO_SKIP_OFFSET = 35
+let DEFAULT_NATIVE_CLOSE_BUTTON_OFFSET = 15
 
 @objc
 public class HyBidSkipOffset: NSObject {
@@ -36,13 +38,23 @@ public class HyBidSkipOffset: NSObject {
     
     @objc
     public init(offset: NSNumber?, isCustom: Bool) {
-        self.offset = offset
-        self.isCustom = isCustom
+        super.init()
+        configure(offset: offset, isCustom: isCustom, style: 0)
     }
     
     @objc
     public init(offset: NSNumber?, isCustom: Bool, style: NSNumber = 0) {
-        self.offset = offset
+        super.init()
+        configure(offset: offset, isCustom: isCustom, style: style)
+    }
+
+    @objc
+    public func configure(offset: NSNumber?, isCustom: Bool, style: NSNumber = 0) {
+        if offset?.intValue ?? 0 > 99 {
+            self.offset = NSNumber(value: 99)
+        } else {
+            self.offset = offset
+        }
         self.isCustom = isCustom
         self.style = style
     }

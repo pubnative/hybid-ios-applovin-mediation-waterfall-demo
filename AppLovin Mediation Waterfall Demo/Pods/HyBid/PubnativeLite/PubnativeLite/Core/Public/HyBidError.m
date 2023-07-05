@@ -48,7 +48,10 @@ NSString * const kHyBidErrorDomain = @"net.pubnative.PubnativeLite";
 }
 
 + (instancetype)hyBidServerErrorWithMessage:(NSString *)message {
-    return [NSError errorWithCode:HyBidErrorCodeServer localizedDescription:[@"HyBid - Server error: " stringByAppendingString: message]];
+    if (message != nil) {
+        return [NSError errorWithCode:HyBidErrorCodeServer localizedDescription:[@"HyBid - Server error: " stringByAppendingString: message]];
+    }
+    return [NSError errorWithCode:HyBidErrorCodeServer localizedDescription:@"HyBid - Server error"];
 }
 
 + (instancetype)hyBidInvalidAsset {
@@ -162,6 +165,14 @@ NSString * const kHyBidErrorDomain = @"net.pubnative.PubnativeLite";
 
 + (instancetype)hyBidAdFeedbackFormNotLoaded {
     return [NSError errorWithCode:HyBidErrorVASTParserSchemaValidation localizedDescription:@"An error has ocurred while loading the ad feedback form"];
+}
+
++ (instancetype)hyBidInvalidHTML {
+    return [NSError errorWithCode:HyBidErrorVASTParserSchemaValidation localizedDescription:@"Invalid HTML"];
+}
+
++ (instancetype)hyBidVASTNoAdResponse {
+    return [NSError errorWithCode:HyBidErrorVASTParserNoAdResponse localizedDescription:@"Server does not or cannot return an Ad"];
 }
 
 @end

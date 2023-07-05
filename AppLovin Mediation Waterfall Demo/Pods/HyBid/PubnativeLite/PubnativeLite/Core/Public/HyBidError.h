@@ -54,7 +54,10 @@ typedef enum {
     HyBidErrorVASTParserNoCompatibleMediaFile = 27,
     HyBidErrorVASTParserNoInternetConnection = 28,
     HyBidErrorVASTParserMovieTooShort = 29,
-    HyBidErrorCodeAdFeedbackFormNotLoaded = 30
+    HyBidErrorCodeAdFeedbackFormNotLoaded = 30,
+    HyBidErrorCodeInvalidHTML = 31,
+    HyBidErrorVASTParserNoAdResponse = 32
+
 } HyBidErrorCode;
 
 @interface NSError (HyBid)
@@ -92,5 +95,7 @@ typedef enum {
 + (instancetype)hyBidVASTParserNoInternetConnectionError;
 + (instancetype)hyBidVASTParserMovieTooShortError;
 + (instancetype)hyBidAdFeedbackFormNotLoaded;
++ (instancetype)hyBidInvalidHTML;
++ (instancetype)hyBidVASTNoAdResponse;
 
 @end

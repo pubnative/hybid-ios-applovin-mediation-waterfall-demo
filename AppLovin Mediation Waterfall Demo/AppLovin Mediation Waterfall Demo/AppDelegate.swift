@@ -48,10 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         targeting.interests = ["music"]
         targeting.gender = "f"     // "f" for female, "m" for male
         HyBid.setTargeting(targeting)
-    // SKOverlay for Interstitial (Optional)
-        HyBid.setInterstitialSKOverlay(true)
-    // SKOverlay for Rewarded (Optional)
-        HyBid.setRewardedSKOverlay(true)
     // Set HyBid log level (Optional)
         HyBidLogger.setLogLevel(HyBidLogLevelDebug)
         return true

@@ -37,6 +37,10 @@
     #import "HyBid-Swift.h"
 #endif
 
+#if __has_include(<ATOM/ATOM-Swift.h>)
+    #import <ATOM/ATOM-Swift.h>
+#endif
+
 #define TIME_TO_EXPIRE 1800 //30 Minutes as in seconds
 
 @interface HyBidAdView() <HyBidSignalDataProcessorDelegate>
@@ -128,11 +132,24 @@
 }
 
 - (void)loadWithZoneID:(NSString *)zoneID withPosition:(HyBidBannerPosition)bannerPosition andWithDelegate:(NSObject<HyBidAdViewDelegate> *)delegate {
+    [self setOpenRTBToFalse];
     self.bannerPosition = bannerPosition;
     [self loadWithZoneID:zoneID andWithDelegate:delegate];
 }
 
 - (void)loadWithZoneID:(NSString *)zoneID andWithDelegate:(NSObject<HyBidAdViewDelegate> *)delegate {
+    [self setOpenRTBToFalse];
+    [self loadWithZoneID:zoneID withAppToken:nil andWithDelegate:delegate];
+}
+
+- (void)loadExchangeAdWithZoneID:(NSString *)zoneID withPosition:(HyBidBannerPosition)bannerPosition andWithDelegate:(NSObject<HyBidAdViewDelegate> *)delegate {
+    [self setOpenRTBToTrue];
+    self.bannerPosition = bannerPosition;
+    [self loadExchangeAdWithZoneID:zoneID andWithDelegate:delegate];
+}
+
+- (void)loadExchangeAdWithZoneID:(NSString *)zoneID andWithDelegate:(NSObject<HyBidAdViewDelegate> *)delegate {
+    [self setOpenRTBToTrue];
     [self loadWithZoneID:zoneID withAppToken:nil andWithDelegate:delegate];
 }
 
@@ -169,6 +186,16 @@
     if (self.adRequest != nil && self.ad != nil) {
         [self.adRequest cacheAd:self.ad];
     }
+}
+
+- (void)setOpenRTBToTrue {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:YES forKey:kIsUsingOpenRTB];
+}
+
+- (void)setOpenRTBToFalse {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setBool:NO forKey:kIsUsingOpenRTB];
 }
 
 - (void)prepareCustomMarkupFrom:(NSString *)markup {
@@ -337,6 +364,7 @@
     if (adReponse && [adReponse length] != 0) {
         HyBidAdRequest* adRequest = [[HyBidAdRequest alloc]init];
         adRequest.delegate = self;
+        adRequest.openRTBAdType = HyBidOpenRTBAdBanner;
         [adRequest processResponseWithJSON:adReponse];
     } else {
         [self.delegate adView:self didFailWithError:[NSError hyBidInvalidAsset]];
@@ -367,18 +395,19 @@
         if (impressionTrackingMethod == HyBidAdImpressionTrackerViewable) {
             [self.adPresenter startTracking];
         } 
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140500
+
+        #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140500
         [[HyBidAdImpression sharedInstance] startImpressionForAd:self.ad];
-#endif
+        #endif
     }
 }
 
 - (void)stopTracking {
     [self.adPresenter stopTracking];
     
-#if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140500
+    #if __IPHONE_OS_VERSION_MAX_ALLOWED >= 140500
     [[HyBidAdImpression sharedInstance] endImpressionForAd:self.ad];
-#endif
+    #endif
 }
 
 - (HyBidAdPresenter *)createAdPresenter {
@@ -430,7 +459,7 @@
     ? self.ad.openRTBAssetGroupID
     : self.ad.assetGroupID;
 
-    if (assetGroupID) {
+    if(assetGroupID){
         switch (assetGroupID.integerValue) {
             case VAST_MRECT:
             case VAST_INTERSTITIAL: {

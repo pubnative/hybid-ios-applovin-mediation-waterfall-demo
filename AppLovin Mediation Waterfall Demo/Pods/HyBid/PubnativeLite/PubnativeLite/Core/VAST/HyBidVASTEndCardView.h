@@ -26,11 +26,11 @@
 #import "HyBidVASTEventProcessor.h"
 #import "HyBidVASTCTAButton.h"
 #import "HyBidAd.h"
+#import "HyBidVASTAd.h"
 
 @protocol HyBidVASTEndCardViewControllerDelegate<NSObject>
 
 - (void)vastEndCardCloseButtonTapped;
-
 - (void)vastEndCardTapped;
 
 @end
@@ -43,7 +43,10 @@
 - (instancetype)initWithDelegate:(NSObject<HyBidVASTEndCardViewControllerDelegate> *)delegate
               withViewController:(UIViewController*)viewController
                           withAd:(HyBidAd *)ad
-                  isInterstitial:(BOOL)isInterstitial;
+                      withVASTAd:(HyBidVASTAd *)vastAd
+                  isInterstitial:(BOOL)isInterstitial
+                   iconXposition:(NSString *)iconXposition
+                   iconYposition:(NSString *)iconYposition;
 
 - (void)displayEndCard:(HyBidVASTEndCard *)endCard withViewController:(UIViewController*) viewController;
 - (void)displayEndCard:(HyBidVASTEndCard *)endCard withCTAButton:(HyBidVASTCTAButton *)ctaButton withViewController:(UIViewController*) viewController;

@@ -49,6 +49,10 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
 @property (nonatomic, strong)HyBidContentInfoView *contentInfoView;
 @property (nonatomic, strong)NSString *_zoneID;
 
+#if __has_include(<ATOM/ATOM-Swift.h>)
+@property (nonatomic, strong)NSArray<NSString *> *_cohorts;
+#endif
+
 @end
 
 @implementation HyBidAd
@@ -57,6 +61,10 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     self.data = nil;
     self.contentInfoView = nil;
     self._zoneID = nil;
+    
+    #if __has_include(<ATOM/ATOM-Swift.h>)
+    self._cohorts = nil;
+    #endif
 }
 
 #pragma mark HyBidAd
@@ -69,6 +77,30 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     }
     return self;
 }
+
+
+#if __has_include(<ATOM/ATOM-Swift.h>)
+- (instancetype)initWithData:(HyBidAdModel *)data withZoneID:(NSString *)zoneID withCohorts:(NSArray<NSString *> *)cohorts
+{
+    self = [super init];
+    if (self) {
+        self.data = data;
+        self._zoneID = zoneID;
+        self._cohorts = cohorts;
+    }
+    return self;
+}
+
+- (instancetype)initOpenRTBWithData:(HyBidOpenRTBAdModel *)data withZoneID:(NSString *)zoneID withCohorts:(NSArray<NSString *> *)cohorts {
+    self = [super init];
+    if (self) {
+        self.openRTBData = data;
+        self._zoneID = zoneID;
+        self._cohorts = cohorts;
+    }
+    return self;
+}
+#endif
 
 - (instancetype)initOpenRTBWithData:(HyBidOpenRTBAdModel *)data withZoneID:(NSString *)zoneID {
     self = [super init];
@@ -132,6 +164,13 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
 - (NSString *)zoneID {
     return self._zoneID;
 }
+
+#if __has_include(<ATOM/ATOM-Swift.h>)
+- (NSArray<NSString *> *)cohorts
+{
+    return self._cohorts;
+}
+#endif
 
 - (NSString *)vast {
     NSString *result = nil;
@@ -216,6 +255,14 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     HyBidDataModel *data = [self metaDataWithType:PNLiteMeta.creativeId];
     if(data) {
         creativeID = data.text;
+    }
+    return creativeID;
+}
+
+- (NSString *)openRTBCreativeID {
+    NSString *creativeID = nil;
+    if(self.openRTBData) {
+        creativeID = self.openRTBData.creativeid;
     }
     return creativeID;
 }
@@ -349,27 +396,27 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     return result;
 }
 
-- (NSString *)contentInfoHorizontalPosition {
-    NSString *result = nil;
-    NSDictionary *jsonDictionary = [self jsonData];
-    if (jsonDictionary) {
-        if ([jsonDictionary objectForKey:PNLiteData.contentInfoHorizontalPosition] != (id)[NSNull null]) {
-            result = [jsonDictionary objectForKey:PNLiteData.contentInfoHorizontalPosition];
-        }
-    }
-    return result;
-}
-
-- (NSString *)contentInfoVeritcalPosition {
-    NSString *result = nil;
-    NSDictionary *jsonDictionary = [self jsonData];
-    if (jsonDictionary) {
-        if ([jsonDictionary objectForKey:PNLiteData.contentInfoVerticalPosition] != (id)[NSNull null]) {
-            result = [jsonDictionary objectForKey:PNLiteData.contentInfoVerticalPosition];
-        }
-    }
-    return result;
-}
+//- (NSString *)contentInfoHorizontalPosition {
+//    NSString *result = nil;
+//    NSDictionary *jsonDictionary = [self jsonData];
+//    if (jsonDictionary) {
+//        if ([jsonDictionary objectForKey:PNLiteData.contentInfoHorizontalPosition] != (id)[NSNull null]) {
+//            result = [jsonDictionary objectForKey:PNLiteData.contentInfoHorizontalPosition];
+//        }
+//    }
+//    return result;
+//}
+//
+//- (NSString *)contentInfoVeritcalPosition {
+//    NSString *result = nil;
+//    NSDictionary *jsonDictionary = [self jsonData];
+//    if (jsonDictionary) {
+//        if ([jsonDictionary objectForKey:PNLiteData.contentInfoVerticalPosition] != (id)[NSNull null]) {
+//            result = [jsonDictionary objectForKey:PNLiteData.contentInfoVerticalPosition];
+//        }
+//    }
+//    return result;
+//}
 
 - (NSNumber *)endcardEnabled {
     NSNumber *result = nil;
@@ -388,6 +435,17 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     if (jsonDictionary) {
         if ([jsonDictionary objectForKey:PNLiteData.endcardCloseDelay] != (id)[NSNull null]) {
             result = [jsonDictionary objectForKey:PNLiteData.endcardCloseDelay];
+        }
+    }
+    return result;
+}
+
+- (NSNumber *)nativeCloseButtonDelay {
+    NSNumber *result = nil;
+    NSDictionary *jsonDictionary = [self jsonData];
+    if (jsonDictionary) {
+        if ([jsonDictionary objectForKey:PNLiteData.nativeCloseButtonDelay] != (id)[NSNull null]) {
+            result = [jsonDictionary objectForKey:PNLiteData.nativeCloseButtonDelay];
         }
     }
     return result;
@@ -421,6 +479,17 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     if (jsonDictionary) {
         if ([jsonDictionary objectForKey:PNLiteData.videoSkipOffset] != (id)[NSNull null]) {
             result = [jsonDictionary objectForKey:PNLiteData.videoSkipOffset];
+        }
+    }
+    return result;
+}
+
+- (NSNumber *)rewardedVideoSkipOffset {
+    NSNumber *result = nil;
+    NSDictionary *jsonDictionary = [self jsonData];
+    if (jsonDictionary) {
+        if ([jsonDictionary objectForKey:PNLiteData.rewardedVideoSkipOffset] != (id)[NSNull null]) {
+            result = [jsonDictionary objectForKey:PNLiteData.rewardedVideoSkipOffset];
         }
     }
     return result;
@@ -607,31 +676,11 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
 }
 
 - (HyBidContentInfoHorizontalPosition)determineContentInfoHorizontalPosition {
-    if (self.contentInfoHorizontalPosition && [self.contentInfoHorizontalPosition isKindOfClass:[NSString class]]) {
-        if ([self.contentInfoHorizontalPosition isEqualToString:@"left"]) {
-            return HyBidContentInfoHorizontalPositionLeft;
-        } else if ([self.contentInfoHorizontalPosition isEqualToString:@"right"]) {
-            return HyBidContentInfoHorizontalPositionRight;
-        } else {
-            return HyBidContentInfoHorizontalPositionLeft;
-        }
-    } else {
-        return HyBidContentInfoHorizontalPositionLeft;
-    }
+    return HyBidContentInfoHorizontalPositionLeft;
 }
 
 - (HyBidContentInfoVerticalPosition)determineContentInfoVerticalPosition {
-    if (self.contentInfoVeritcalPosition && [self.contentInfoVeritcalPosition isKindOfClass:[NSString class]]) {
-        if ([self.contentInfoVeritcalPosition isEqualToString:@"top"]) {
-            return HyBidContentInfoVerticalPositionTop;
-        } else if ([self.contentInfoVeritcalPosition isEqualToString:@"bottom"]) {
-            return HyBidContentInfoVerticalPositionBottom;
-        } else {
-            return HyBidContentInfoVerticalPositionTop;
-        }
-    } else {
-        return HyBidContentInfoVerticalPositionTop;
-    }
+    return HyBidContentInfoVerticalPositionBottom;
 }
 
 - (HyBidSkAdNetworkModel *)getOpenRTBSkAdNetworkModel {
@@ -641,6 +690,9 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     if (data) {
         NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
         
+        if ([data stringFieldWithKey:@"sourceIdentifier"] != nil) {
+            [dict setValue:[data stringFieldWithKey:@"sourceIdentifier"] forKey:@"sourceIdentifier"];
+        }
         if ([data stringFieldWithKey:@"campaign"] != nil) {
             [dict setValue:[data stringFieldWithKey:@"campaign"] forKey:@"campaign"];
         }
@@ -707,6 +759,9 @@ NSString *const ContentInfoViewIcon = @"https://cdn.pubnative.net/static/adserve
     if (data) {
         NSMutableDictionary *dict = [[NSMutableDictionary alloc]init];
         
+        if ([data stringFieldWithKey:@"sourceIdentifier"] != nil) {
+            [dict setValue:[data stringFieldWithKey:@"sourceIdentifier"] forKey:@"sourceIdentifier"];
+        }
         if ([data stringFieldWithKey:@"campaign"] != nil) {
             [dict setValue:[data stringFieldWithKey:@"campaign"] forKey:@"campaign"];
         }
