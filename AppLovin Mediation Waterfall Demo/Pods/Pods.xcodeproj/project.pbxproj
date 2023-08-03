@@ -591,7 +591,6 @@
 		1B978C99C5DD00731BB2325CEEB2DBAF /* HyBidAdImpression.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidAdImpression.m; path = PubnativeLite/PubnativeLite/Core/Public/HyBidAdImpression.m; sourceTree = "<group>"; };
 		1E2D9B0767458135A319C62CC67130C3 /* PNLiteMRAIDParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLiteMRAIDParser.h; path = PubnativeLite/PubnativeLite/Core/MRAID/PNLiteMRAIDParser.h; sourceTree = "<group>"; };
 		1E9010987042C4CDD816984A27535EA8 /* HyBidAdSource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidAdSource.m; path = PubnativeLite/PubnativeLite/Core/Auction/HyBidAdSource.m; sourceTree = "<group>"; };
-		1FA641467AE1D58012972693CB25AC30 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.10.1/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		1FCF8BFFAE1AC22C1F8E77D071B84DD0 /* HyBidVASTError.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVASTError.m; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTError.m"; sourceTree = "<group>"; };
 		1FDF7962EF2D38C8219E2D11E386BC9E /* HyBid.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBid.m; path = PubnativeLite/PubnativeLite/Core/Public/HyBid.m; sourceTree = "<group>"; };
 		1FE9497D56F0A2EAF1576FE3CAE4C9A5 /* HyBid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HyBid.release.xcconfig; sourceTree = "<group>"; };
@@ -905,7 +904,6 @@
 		C2752457073BA3E493A8227066DDF599 /* HyBidDiagnosticsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidDiagnosticsManager.m; path = PubnativeLite/PubnativeLite/Core/Public/HyBidDiagnosticsManager.m; sourceTree = "<group>"; };
 		C2D942793CB26EF5CB323FD8516DC9A7 /* PNLitePropertyAnimation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PNLitePropertyAnimation.m; path = PubnativeLite/PubnativeLite/Core/VAST/PNLitePropertyAnimation.m; sourceTree = "<group>"; };
 		C2DB72A8FCE02BC0B78F5AC40B00253F /* PNLiteVASTPlayerInterstitialViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = PNLiteVASTPlayerInterstitialViewController.xib; path = PubnativeLite/PubnativeLite/Resources/PNLiteVASTPlayerInterstitialViewController.xib; sourceTree = "<group>"; };
-		C3279C0CC34F983DCFC4423B291A84FE /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.10.1/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
 		C333BA94211833BF68D21889EC018A54 /* HyBidEncryption.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidEncryption.h; path = "PubnativeLite/PubnativeLite/Core/Ad Model/VGI ID/HyBidEncryption.h"; sourceTree = "<group>"; };
 		C53B642FEC6D0145AB4B0C07FCDBF65C /* HyBidStarRatingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidStarRatingView.h; path = PubnativeLite/PubnativeLite/Core/Public/HyBidStarRatingView.h; sourceTree = "<group>"; };
 		C5ABFDADFEC8720741CD8BED0E351614 /* HyBidConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HyBidConstants.swift; path = PubnativeLite/PubnativeLite/Core/Swift/HyBidConstants.swift; sourceTree = "<group>"; };
@@ -941,6 +939,7 @@
 		D1C6AB1DBDBB7DEBC0487CDF908295A0 /* HyBidXMLEx.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidXMLEx.m; path = "PubnativeLite/PubnativeLite/Core/VAST/XML Parser/HyBidXMLEx.m"; sourceTree = "<group>"; };
 		D2BA7876A234567423535ABD527F48A4 /* HyBidSettings.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HyBidSettings.swift; path = PubnativeLite/PubnativeLite/Core/Swift/HyBidSettings.swift; sourceTree = "<group>"; };
 		D380A4099C09D719639C4D6F30E2D5A1 /* HyBidRewardedPresenterWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HyBidRewardedPresenterWrapper.swift; path = PubnativeLite/PubnativeLite/Rewarded/Swift/HyBidRewardedPresenterWrapper.swift; sourceTree = "<group>"; };
+		D4A1B9C4BCC96C85418D4D8D2884EB74 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.11.2/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		D4C21BD49452699B3DC5C37DFCBA93C4 /* HyBidVASTClickThrough.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTClickThrough.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTClickThrough.h"; sourceTree = "<group>"; };
 		D558C39F274569405A6EADBE3458D7BD /* HyBidVASTCompanionClickThrough.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTCompanionClickThrough.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTCompanionClickThrough.h"; sourceTree = "<group>"; };
 		D656DD015405C3885F0A37E3220557A2 /* HyBidVASTEndCardManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidVASTEndCardManager.h; path = "PubnativeLite/PubnativeLite/Core/VAST/VAST Models/HyBidVASTEndCardManager.h"; sourceTree = "<group>"; };
@@ -959,6 +958,7 @@
 		DBE192FED812A046E035493498D73569 /* HyBidVGIEmail.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidVGIEmail.m; path = "PubnativeLite/PubnativeLite/Core/Ad Model/VGI ID/HyBidVGIEmail.m"; sourceTree = "<group>"; };
 		DBF576392A0746D19402F635CE019385 /* HyBidIntegrationType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidIntegrationType.h; path = "PubnativeLite/PubnativeLite/Core/Ad Model/Public/HyBidIntegrationType.h"; sourceTree = "<group>"; };
 		DC283A0D2F59A941D93859FC1AAF635F /* HyBidRewardedPresenterFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidRewardedPresenterFactory.h; path = PubnativeLite/PubnativeLite/Rewarded/Public/HyBidRewardedPresenterFactory.h; sourceTree = "<group>"; };
+		DC297031D7E20EBA221D1287AAA36382 /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.11.2/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
 		DCAF1FDCEA6AB4DBA0E5A2504B6A2238 /* HyBidTimerState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HyBidTimerState.h; path = PubnativeLite/PubnativeLite/Core/VAST/HyBidTimerState.h; sourceTree = "<group>"; };
 		DD487C202F0056F56C36807A6E9A8423 /* HyBidNativeAdRenderer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HyBidNativeAdRenderer.m; path = PubnativeLite/PubnativeLite/Native/HyBidNativeAdRenderer.m; sourceTree = "<group>"; };
 		DF63FD118BC336C7F0B2375D96526CB4 /* PNLiteHttpRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PNLiteHttpRequest.h; path = PubnativeLite/PubnativeLite/Core/Network/PNLiteHttpRequest.h; sourceTree = "<group>"; };
@@ -1072,14 +1072,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		162940E4D75BB5FB7203F951A941C444 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				1FA641467AE1D58012972693CB25AC30 /* AppLovinSDKResources.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		17F47ADA6588429096902173616AF8B8 /* Banner */ = {
 			isa = PBXGroup;
 			children = (
@@ -1155,6 +1147,14 @@
 				70A9607CD8D6D2C4F259AEC39647D13C /* PNLiteVASTPlayerInterstitialViewController.m */,
 			);
 			name = FullScreen;
+			sourceTree = "<group>";
+		};
+		420A5620DF5ADF0FF6D7BAEDA46C210E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC297031D7E20EBA221D1287AAA36382 /* AppLovinSDK.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		42F0B781AF49AC27A6EF0FDEEF92C862 /* RewardedVideo */ = {
@@ -1625,14 +1625,6 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		C5F96708A683669B107DAD8F2D628982 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C3279C0CC34F983DCFC4423B291A84FE /* AppLovinSDK.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		CCD1AA03D09CEE734BB36597E640F104 /* Native */ = {
 			isa = PBXGroup;
 			children = (
@@ -1655,6 +1647,14 @@
 				0EDF464B6DACC45CFB21FCDA58848F8D /* Products */,
 				D16F0A05816A02EE7A0A4DB18F0DBDD1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		CFFB6BB16178D6D8D0D54AB27AEA01FF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D4A1B9C4BCC96C85418D4D8D2884EB74 /* AppLovinSDKResources.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		D11253B0C51BF81197E5E75447FC52CB /* Pods */ = {
@@ -1722,8 +1722,8 @@
 		FC45AA78520259F2583D68EA0E208CFF /* AppLovinSDK */ = {
 			isa = PBXGroup;
 			children = (
-				C5F96708A683669B107DAD8F2D628982 /* Frameworks */,
-				162940E4D75BB5FB7203F951A941C444 /* Resources */,
+				420A5620DF5ADF0FF6D7BAEDA46C210E /* Frameworks */,
+				CFFB6BB16178D6D8D0D54AB27AEA01FF /* Resources */,
 				E4C935698CFE81FE5D7A2B7AFAC00927 /* Support Files */,
 			);
 			name = AppLovinSDK;
