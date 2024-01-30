@@ -1,10 +1,3 @@
-//
-//  AppDelegate.swift
-//  AppLovin Mediation Waterfall Demo
-//
-//  Created by Can Soykarafakili on 11.03.22.
-//
-
 import UIKit
 // Step 1: Import HyBid into your class (Only required if anything in Step 4 below is set)
 import HyBid
@@ -13,15 +6,15 @@ import AppLovinSDK
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
-        
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 // Step 3: Setup & Initialize AppLovin SDK
         let settings = ALSdkSettings()
 
-        // Optional: Enable built in User Consent Flow
-        settings.consentFlowSettings.isEnabled = true
-        settings.consentFlowSettings.privacyPolicyURL = URL(string: "https://verve.com/product-privacy-policies/")
-        settings.consentFlowSettings.termsOfServiceURL = URL(string: "https://verve.com/publisher-content-guidelines/")
+        // Optional: Enable built in User Terms and Privacy Policy Flow
+        settings.termsAndPrivacyPolicyFlowSettings.isEnabled = true
+        settings.termsAndPrivacyPolicyFlowSettings.privacyPolicyURL = URL(string: "https://verve.com/product-privacy-policies/")
+        settings.termsAndPrivacyPolicyFlowSettings.termsOfServiceURL = URL(string: "https://verve.com/publisher-content-guidelines/")
     
         let sdk = ALSdk.shared(with: settings)!
         
@@ -36,12 +29,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         HyBid.setTestMode(false)
     // Location Tracking (Optional)
         HyBid.setLocationTracking(true)
-    // HTML/MRAID Interstitial skipOffset (Optional)
-        HyBid.setHTMLInterstitialSkipOffset(2)
-    // Video Interstitial skipOffset (Optional)
-        HyBid.setVideoInterstitialSkipOffset(5)
-    // Custom Click Behavior (Optional)
-        HyBid.setInterstitialActionBehaviour(HB_CREATIVE)
     // 1st party user data Targeting (Optional)
         let targeting = HyBidTargetingModel()
         targeting.age = 28

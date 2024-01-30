@@ -1,10 +1,3 @@
-//
-//  SceneDelegate.swift
-//  AppLovin Mediation Waterfall Demo
-//
-//  Created by Can Soykarafakili on 11.03.22.
-//
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
