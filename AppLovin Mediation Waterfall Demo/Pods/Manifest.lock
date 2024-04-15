@@ -1,38 +1,47 @@
 PODS:
-  - AppLovinMediationVerveCustomNetworkAdapter (2.21.2.0):
+  - AppLovinMediationVerveCustomNetworkAdapter (3.0.0.0):
     - AppLovinSDK (>= 12.0.0)
-    - HyBid (= 2.21.2)
-  - AppLovinSDK (12.3.1)
-  - HyBid (2.21.2):
-    - HyBid/Banner (= 2.21.2)
-    - HyBid/Core (= 2.21.2)
-    - HyBid/FullScreen (= 2.21.2)
-    - HyBid/Native (= 2.21.2)
-    - HyBid/RewardedVideo (= 2.21.2)
-  - HyBid/Banner (2.21.2):
+    - HyBid (= 3.0.0)
+  - AppLovinSDK (12.4.1)
+  - ATOM-Standalone (3.0.7)
+  - HyBid (3.0.0):
+    - ATOM-Standalone (~> 3.0.7)
+    - HyBid/Banner (= 3.0.0)
+    - HyBid/Core (= 3.0.0)
+    - HyBid/FullScreen (= 3.0.0)
+    - HyBid/Native (= 3.0.0)
+    - HyBid/RewardedVideo (= 3.0.0)
+  - HyBid/Banner (3.0.0):
+    - ATOM-Standalone (~> 3.0.7)
     - HyBid/Core
-  - HyBid/Core (2.21.2)
-  - HyBid/FullScreen (2.21.2):
+  - HyBid/Core (3.0.0):
+    - ATOM-Standalone (~> 3.0.7)
+  - HyBid/FullScreen (3.0.0):
+    - ATOM-Standalone (~> 3.0.7)
     - HyBid/Core
-  - HyBid/Native (2.21.2):
+  - HyBid/Native (3.0.0):
+    - ATOM-Standalone (~> 3.0.7)
     - HyBid/Core
-  - HyBid/RewardedVideo (2.21.2):
+  - HyBid/RewardedVideo (3.0.0):
+    - ATOM-Standalone (~> 3.0.7)
     - HyBid/Core
 
 DEPENDENCIES:
-  - AppLovinMediationVerveCustomNetworkAdapter (= 2.21.2.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (= 3.0.0.0)
 
 SPEC REPOS:
   trunk:
     - AppLovinMediationVerveCustomNetworkAdapter
     - AppLovinSDK
+    - ATOM-Standalone
     - HyBid
 
 SPEC CHECKSUMS:
-  AppLovinMediationVerveCustomNetworkAdapter: 7637d01a7989b863fb76e123a3c069ba7c8e7391
-  AppLovinSDK: d99a5a32b00e844932f4583f863780e1af835722
-  HyBid: 86243a6ec5604b078067d00c306578c3ffc867ee
+  AppLovinMediationVerveCustomNetworkAdapter: 454c1c01ed55db8b83892675166006f37bc898a1
+  AppLovinSDK: c57ad0d34625c971d2db127f8ef60570b28ff51a
+  ATOM-Standalone: 26549f5cffb457a7660b3cb2d5a5f1faf24da913
+  HyBid: e98ce54597d146a8fec024d3e7c83cb5d4f11be6
 
-PODFILE CHECKSUM: e311ff9f912b332bebff130ebdcee9ad32f5f208
+PODFILE CHECKSUM: 3cfb686071716ce3fd42f49c62f377e18ccf143d
 
 COCOAPODS: 1.15.2
