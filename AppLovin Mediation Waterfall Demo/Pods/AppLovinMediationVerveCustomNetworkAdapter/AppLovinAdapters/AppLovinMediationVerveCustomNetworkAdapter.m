@@ -1,5 +1,5 @@
 //
-//  Copyright © 2021 PubNative. All rights reserved.
+//  Copyright © 2024 PubNative. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
 
 #import "AppLovinMediationVerveCustomNetworkAdapter.h"
 
-#define VERVE_ADAPTER_VERSION @"3.0.0.0"
+#define VERVE_ADAPTER_VERSION @"3.0.2.0"
 #define MAX_MEDIATION_VENDOR @"m"
 #define PARAM_APP_TOKEN @"pn_app_token"
 #define PARAM_TEST_MODE @"pn_test"
