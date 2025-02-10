@@ -1,38 +1,45 @@
 PODS:
-  - AppLovinMediationVerveCustomNetworkAdapter (3.0.0-beta1.0):
-    - AppLovinSDK (>= 11.1.2)
-    - HyBid (= 3.0.0-beta1)
-  - AppLovinSDK (12.0.0)
-  - HyBid (3.0.0-beta1):
-    - HyBid/Banner (= 3.0.0-beta1)
-    - HyBid/Core (= 3.0.0-beta1)
-    - HyBid/FullScreen (= 3.0.0-beta1)
-    - HyBid/Native (= 3.0.0-beta1)
-    - HyBid/RewardedVideo (= 3.0.0-beta1)
-  - HyBid/Banner (3.0.0-beta1):
+  - AppLovinMediationVerveCustomNetworkAdapter (3.2.0-beta5.0):
+    - AppLovinSDK (>= 12.0.0)
+    - HyBid (= 3.2.0-beta5)
+  - AppLovinSDK (13.1.0)
+  - ATOM-Standalone (3.5.0-beta.1)
+  - HyBid (3.2.0-beta5):
+    - HyBid/ATOM (= 3.2.0-beta5)
+    - HyBid/Banner (= 3.2.0-beta5)
+    - HyBid/Core (= 3.2.0-beta5)
+    - HyBid/FullScreen (= 3.2.0-beta5)
+    - HyBid/Native (= 3.2.0-beta5)
+    - HyBid/RewardedVideo (= 3.2.0-beta5)
+  - HyBid/ATOM (3.2.0-beta5):
+    - ATOM-Standalone (~> 3.5.0-beta.1)
     - HyBid/Core
-  - HyBid/Core (3.0.0-beta1)
-  - HyBid/FullScreen (3.0.0-beta1):
+  - HyBid/Banner (3.2.0-beta5):
     - HyBid/Core
-  - HyBid/Native (3.0.0-beta1):
+  - HyBid/Core (3.2.0-beta5)
+  - HyBid/FullScreen (3.2.0-beta5):
     - HyBid/Core
-  - HyBid/RewardedVideo (3.0.0-beta1):
+  - HyBid/Native (3.2.0-beta5):
+    - HyBid/Core
+  - HyBid/RewardedVideo (3.2.0-beta5):
     - HyBid/Core
 
 DEPENDENCIES:
-  - AppLovinMediationVerveCustomNetworkAdapter (= 3.0.0-beta1.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (= 3.2.0-beta5.0)
 
 SPEC REPOS:
   trunk:
     - AppLovinMediationVerveCustomNetworkAdapter
     - AppLovinSDK
+    - ATOM-Standalone
     - HyBid
 
 SPEC CHECKSUMS:
-  AppLovinMediationVerveCustomNetworkAdapter: 14104746e1460f22c8a518930a4912a51bc733c5
-  AppLovinSDK: 15679e9f576a4d8662e1dc537c9a4ed47d3292a5
-  HyBid: 6a9318f0cf190695e485642f1e7d6f657f1eb0c9
+  AppLovinMediationVerveCustomNetworkAdapter: 1af6601289b7ebc244220365e533a2ef8f97b088
+  AppLovinSDK: 539a0178d8bef4d68b2551a93526e0c1bba06cb2
+  ATOM-Standalone: f28e76712324a9d695dc0705fbd180707a0ffb69
+  HyBid: c45e63f4263153f46dc1631204cc6c0f326fb49b
 
-PODFILE CHECKSUM: 5b9725a49f658dd54aec9799182d560c4f47a712
+PODFILE CHECKSUM: 0b0be450af18c945954c475e97ea00d37eb609e2
 
-COCOAPODS: 1.13.0
+COCOAPODS: 1.16.1
