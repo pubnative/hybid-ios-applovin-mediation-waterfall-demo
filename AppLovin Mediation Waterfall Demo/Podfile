@@ -6,6 +6,6 @@ target 'AppLovin Mediation Waterfall Demo' do
   use_frameworks!
 
   # Pods for AppLovin Mediation Waterfall Demo
-  pod 'AppLovinMediationVerveCustomNetworkAdapter', '3.2.0-beta5.0'
+  pod 'AppLovinMediationVerveCustomNetworkAdapter', '3.2.0-beta6.0'
 
 end
