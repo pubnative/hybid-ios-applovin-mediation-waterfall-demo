@@ -1,31 +1,31 @@
 PODS:
-  - AppLovinMediationVerveCustomNetworkAdapter (3.2.0.0):
+  - AppLovinMediationVerveCustomNetworkAdapter (3.6.1.0):
     - AppLovinSDK (>= 13.0.0)
-    - HyBid (= 3.2.0)
-  - AppLovinSDK (13.1.0)
-  - ATOM-Standalone (3.5.0)
-  - HyBid (3.2.0):
-    - HyBid/ATOM (= 3.2.0)
-    - HyBid/Banner (= 3.2.0)
-    - HyBid/Core (= 3.2.0)
-    - HyBid/FullScreen (= 3.2.0)
-    - HyBid/Native (= 3.2.0)
-    - HyBid/RewardedVideo (= 3.2.0)
-  - HyBid/ATOM (3.2.0):
-    - ATOM-Standalone (~> 3.5.0)
+    - HyBid (= 3.6.1)
+  - AppLovinSDK (13.3.1)
+  - ATOM-Standalone (3.7.0)
+  - HyBid (3.6.1):
+    - HyBid/ATOM (= 3.6.1)
+    - HyBid/Banner (= 3.6.1)
+    - HyBid/Core (= 3.6.1)
+    - HyBid/FullScreen (= 3.6.1)
+    - HyBid/Native (= 3.6.1)
+    - HyBid/RewardedVideo (= 3.6.1)
+  - HyBid/ATOM (3.6.1):
+    - ATOM-Standalone
     - HyBid/Core
-  - HyBid/Banner (3.2.0):
+  - HyBid/Banner (3.6.1):
     - HyBid/Core
-  - HyBid/Core (3.2.0)
-  - HyBid/FullScreen (3.2.0):
+  - HyBid/Core (3.6.1)
+  - HyBid/FullScreen (3.6.1):
     - HyBid/Core
-  - HyBid/Native (3.2.0):
+  - HyBid/Native (3.6.1):
     - HyBid/Core
-  - HyBid/RewardedVideo (3.2.0):
+  - HyBid/RewardedVideo (3.6.1):
     - HyBid/Core
 
 DEPENDENCIES:
-  - AppLovinMediationVerveCustomNetworkAdapter (= 3.2.0.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (= 3.6.1.0)
 
 SPEC REPOS:
   trunk:
@@ -35,11 +35,11 @@ SPEC REPOS:
     - HyBid
 
 SPEC CHECKSUMS:
-  AppLovinMediationVerveCustomNetworkAdapter: 9e1fae03540a096cc312ca13dd865406ebeed54e
-  AppLovinSDK: 539a0178d8bef4d68b2551a93526e0c1bba06cb2
-  ATOM-Standalone: c6f8d00c510cdeec33aa95cdf1f31d78b62d0aa7
-  HyBid: 575a647ce48fb4ed40dab1a1ce203b1ae0cdb294
+  AppLovinMediationVerveCustomNetworkAdapter: 9edd60ab4c31f3b563e16454097c774c228ff342
+  AppLovinSDK: 5075837afdee4fb429121799b8cbcc5918ef3a23
+  ATOM-Standalone: 28d598876cd7ab619f2cf0b910d4f4fd7e8c8f74
+  HyBid: f6ed92d6af10dcbc23f8a43a42fdf88a45ecdec7
 
-PODFILE CHECKSUM: d8fe607eceff1c9f0b96ff361a29032062a5741d
+PODFILE CHECKSUM: 254181e5083ff997fda058c9558991cb1278a364
 
-COCOAPODS: 1.16.1
+COCOAPODS: 1.16.2
