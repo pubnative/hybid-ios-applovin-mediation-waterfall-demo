@@ -1,31 +1,31 @@
 PODS:
-  - AppLovinMediationVerveCustomNetworkAdapter (3.6.1.0):
+  - AppLovinMediationVerveCustomNetworkAdapter (3.7.0.0):
     - AppLovinSDK (>= 13.0.0)
-    - HyBid (= 3.6.1)
-  - AppLovinSDK (13.3.1)
-  - ATOM-Standalone (3.7.0)
-  - HyBid (3.6.1):
-    - HyBid/ATOM (= 3.6.1)
-    - HyBid/Banner (= 3.6.1)
-    - HyBid/Core (= 3.6.1)
-    - HyBid/FullScreen (= 3.6.1)
-    - HyBid/Native (= 3.6.1)
-    - HyBid/RewardedVideo (= 3.6.1)
-  - HyBid/ATOM (3.6.1):
+    - HyBid (= 3.7.0)
+  - AppLovinSDK (13.4.0)
+  - ATOM-Standalone (3.8.0)
+  - HyBid (3.7.0):
+    - HyBid/ATOM (= 3.7.0)
+    - HyBid/Banner (= 3.7.0)
+    - HyBid/Core (= 3.7.0)
+    - HyBid/FullScreen (= 3.7.0)
+    - HyBid/Native (= 3.7.0)
+    - HyBid/RewardedVideo (= 3.7.0)
+  - HyBid/ATOM (3.7.0):
     - ATOM-Standalone
     - HyBid/Core
-  - HyBid/Banner (3.6.1):
+  - HyBid/Banner (3.7.0):
     - HyBid/Core
-  - HyBid/Core (3.6.1)
-  - HyBid/FullScreen (3.6.1):
+  - HyBid/Core (3.7.0)
+  - HyBid/FullScreen (3.7.0):
     - HyBid/Core
-  - HyBid/Native (3.6.1):
+  - HyBid/Native (3.7.0):
     - HyBid/Core
-  - HyBid/RewardedVideo (3.6.1):
+  - HyBid/RewardedVideo (3.7.0):
     - HyBid/Core
 
 DEPENDENCIES:
-  - AppLovinMediationVerveCustomNetworkAdapter (= 3.6.1.0)
+  - AppLovinMediationVerveCustomNetworkAdapter (= 3.7.0.0)
 
 SPEC REPOS:
   trunk:
@@ -35,11 +35,11 @@ SPEC REPOS:
     - HyBid
 
 SPEC CHECKSUMS:
-  AppLovinMediationVerveCustomNetworkAdapter: 9edd60ab4c31f3b563e16454097c774c228ff342
-  AppLovinSDK: 5075837afdee4fb429121799b8cbcc5918ef3a23
-  ATOM-Standalone: 28d598876cd7ab619f2cf0b910d4f4fd7e8c8f74
-  HyBid: f6ed92d6af10dcbc23f8a43a42fdf88a45ecdec7
+  AppLovinMediationVerveCustomNetworkAdapter: b165c929edbd07e4cc3defb786d52d328db7a0f6
+  AppLovinSDK: 33fcc783889e2d522ae26886b31e5551246a5b2f
+  ATOM-Standalone: ad17f0d0e60b22f67ed99e5a336425d68d324f3e
+  HyBid: 84608b62cdebde3dcab171948959fa617957063b
 
-PODFILE CHECKSUM: 254181e5083ff997fda058c9558991cb1278a364
+PODFILE CHECKSUM: 7db3761d558c1133de4912df6dea5d0cdc4c7fd9
 
-COCOAPODS: 1.16.2
+COCOAPODS: 1.16.0
