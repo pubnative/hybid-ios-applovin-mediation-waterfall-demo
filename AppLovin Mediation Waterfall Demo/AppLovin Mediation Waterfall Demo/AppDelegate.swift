@@ -9,7 +9,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Step 3: Setup & Initialize AppLovin SDK
-        let initConfig = ALSdkInitializationConfiguration(sdkKey: Bundle.main.object(forInfoDictionaryKey: "AppLovinSdkKey") as! String) { builder in
+        guard let sdkKey = Bundle.main.object(forInfoDictionaryKey: "AppLovinSdkKey") as? String,
+              !sdkKey.isEmpty else {
+            assertionFailure("AppLovinSdkKey must be present in Info.plist and be a non-empty String.")
+            return false
+        }
+        let initConfig = ALSdkInitializationConfiguration(sdkKey: sdkKey) { builder in
             builder.mediationProvider = "max"
         }
         let settings = ALSdk.shared().settings
