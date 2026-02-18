@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		342726B12F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 342726B02F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter */; };
 		344C8A1727DB5F57000B9C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A1627DB5F57000B9C6F /* AppDelegate.swift */; };
 		344C8A1927DB5F57000B9C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A1827DB5F57000B9C6F /* SceneDelegate.swift */; };
 		344C8A1E27DB5F57000B9C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344C8A1C27DB5F57000B9C6F /* Main.storyboard */; };
@@ -17,11 +18,10 @@
 		344C8A3127DB70C9000B9C6F /* MRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A3027DB70C9000B9C6F /* MRect.swift */; };
 		344C8A3327DB7635000B9C6F /* Interstitial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A3227DB7635000B9C6F /* Interstitial.swift */; };
 		344C8A3527DB7C68000B9C6F /* Rewarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A3427DB7C68000B9C6F /* Rewarded.swift */; };
-		925E50AB273973C94276B6C5 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		344C8A1327DB5F57000B9C6F /* AppLovin Mediation Waterfall Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppLovin Mediation Waterfall Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppLovin Mediation Waterfall Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		344C8A1627DB5F57000B9C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		344C8A1827DB5F57000B9C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		344C8A1D27DB5F57000B9C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -33,9 +33,6 @@
 		344C8A3027DB70C9000B9C6F /* MRect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRect.swift; sourceTree = "<group>"; };
 		344C8A3227DB7635000B9C6F /* Interstitial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interstitial.swift; sourceTree = "<group>"; };
 		344C8A3427DB7C68000B9C6F /* Rewarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rewarded.swift; sourceTree = "<group>"; };
-		8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovin_Mediation_Waterfall_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AB4569BDF16E3FAAC4CE8CD1 /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig"; path = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig"; sourceTree = "<group>"; };
-		D6E51C4E3CADE4E9AD08A05E /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovin Mediation Waterfall Demo.release.xcconfig"; path = "Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925E50AB273973C94276B6C5 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework in Frameworks */,
+				342726B12F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +51,9 @@
 			isa = PBXGroup;
 			children = (
 				344C8A1527DB5F57000B9C6F /* AppLovin Mediation Waterfall Demo */,
-				344C8A1427DB5F57000B9C6F /* Products */,
 				67D84FD43507C10D9A76C21C /* Pods */,
-				6A3C5B1FFABFB33A96DC6FCD /* Frameworks */,
+				3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */,
 			);
-			sourceTree = "<group>";
-		};
-		344C8A1427DB5F57000B9C6F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				344C8A1327DB5F57000B9C6F /* AppLovin Mediation Waterfall Demo.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		344C8A1527DB5F57000B9C6F /* AppLovin Mediation Waterfall Demo */ = {
@@ -105,18 +93,8 @@
 		67D84FD43507C10D9A76C21C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AB4569BDF16E3FAAC4CE8CD1 /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */,
-				D6E51C4E3CADE4E9AD08A05E /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */,
 			);
 			path = Pods;
-			sourceTree = "<group>";
-		};
-		6A3C5B1FFABFB33A96DC6FCD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8823F9A5B3BC7D395054FDD6 /* Pods_AppLovin_Mediation_Waterfall_Demo.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,11 +104,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 344C8A2727DB5F58000B9C6F /* Build configuration list for PBXNativeTarget "AppLovin Mediation Waterfall Demo" */;
 			buildPhases = (
-				F593CC650A6FE07E67F3FEEC /* [CP] Check Pods Manifest.lock */,
 				344C8A0F27DB5F57000B9C6F /* Sources */,
 				344C8A1027DB5F57000B9C6F /* Frameworks */,
 				344C8A1127DB5F57000B9C6F /* Resources */,
-				A73FE301422CA6B97A74D578 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -138,7 +114,7 @@
 			);
 			name = "AppLovin Mediation Waterfall Demo";
 			productName = "AppLovin Mediation Waterfall Demo";
-			productReference = 344C8A1327DB5F57000B9C6F /* AppLovin Mediation Waterfall Demo.app */;
+			productReference = 3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +141,10 @@
 				Base,
 			);
 			mainGroup = 344C8A0A27DB5F57000B9C6F;
-			productRefGroup = 344C8A1427DB5F57000B9C6F /* Products */;
+			packageReferences = (
+				342726AF2F45FD320097D892 /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */,
+			);
+			productRefGroup = 344C8A0A27DB5F57000B9C6F;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -187,48 +166,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		A73FE301422CA6B97A74D578 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppLovin Mediation Waterfall Demo/Pods-AppLovin Mediation Waterfall Demo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F593CC650A6FE07E67F3FEEC /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-AppLovin Mediation Waterfall Demo-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		344C8A0F27DB5F57000B9C6F /* Sources */ = {
@@ -384,7 +321,6 @@
 		};
 		344C8A2827DB5F58000B9C6F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AB4569BDF16E3FAAC4CE8CD1 /* Pods-AppLovin Mediation Waterfall Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -413,7 +349,6 @@
 		};
 		344C8A2927DB5F58000B9C6F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D6E51C4E3CADE4E9AD08A05E /* Pods-AppLovin Mediation Waterfall Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -462,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		342726AF2F45FD320097D892 /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pubnative/AppLovinMediationVerveCustomNetworkAdapter";
+			requirement = {
+				branch = "VMI-1491-add-spm-support";
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		342726B02F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 342726AF2F45FD320097D892 /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */;
+			productName = AppLovinMediationVerveCustomNetworkAdapter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 344C8A0B27DB5F57000B9C6F /* Project object */;
 }
