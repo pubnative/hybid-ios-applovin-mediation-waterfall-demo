@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AppLovin Mediation Waterfall Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "AppLovin Mediation Waterfall Demo.app"; path = "/Users/ayselabdullayeva/Documents/hybid-ios-applovin-mediation-waterfall-demo/AppLovin Mediation Waterfall Demo/build/Debug-iphoneos/AppLovin Mediation Waterfall Demo.app"; sourceTree = "<absolute>"; };
 		344C8A1627DB5F57000B9C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		344C8A1827DB5F57000B9C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		344C8A1D27DB5F57000B9C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,8 +51,6 @@
 			isa = PBXGroup;
 			children = (
 				344C8A1527DB5F57000B9C6F /* AppLovin Mediation Waterfall Demo */,
-				67D84FD43507C10D9A76C21C /* Pods */,
-				3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,13 +86,6 @@
 				344C8A2C27DB6838000B9C6F /* AppLovinMediation.storyboard */,
 			);
 			path = "Storyboards and Xibs";
-			sourceTree = "<group>";
-		};
-		67D84FD43507C10D9A76C21C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
