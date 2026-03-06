@@ -15,8 +15,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pubnative/AppLovinMediationVerveCustomNetworkAdapter",
       "state" : {
-        "branch" : "VMI-1491-add-spm-support",
-        "revision" : "a145e2e5d7dc7b63df9ad9002649c756d2da0daf"
+        "branch" : "master",
+        "revision" : "69b502cc3857e2d374bd74ecc6e01ebd5e0c03f4"
       }
     },
     {

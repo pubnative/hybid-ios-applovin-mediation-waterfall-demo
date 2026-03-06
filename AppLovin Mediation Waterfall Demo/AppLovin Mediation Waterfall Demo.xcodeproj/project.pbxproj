@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		342726B12F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 342726B02F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter */; };
+		340A95902F5B23FC001C311F /* AppLovinMediationVerveCustomNetworkAdapter in Frameworks */ = {isa = PBXBuildFile; productRef = 340A958F2F5B23FC001C311F /* AppLovinMediationVerveCustomNetworkAdapter */; };
 		344C8A1727DB5F57000B9C6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A1627DB5F57000B9C6F /* AppDelegate.swift */; };
 		344C8A1927DB5F57000B9C6F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344C8A1827DB5F57000B9C6F /* SceneDelegate.swift */; };
 		344C8A1E27DB5F57000B9C6F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 344C8A1C27DB5F57000B9C6F /* Main.storyboard */; };
@@ -21,7 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "AppLovin Mediation Waterfall Demo.app"; path = "/Users/ayselabdullayeva/Documents/hybid-ios-applovin-mediation-waterfall-demo/AppLovin Mediation Waterfall Demo/build/Debug-iphoneos/AppLovin Mediation Waterfall Demo.app"; sourceTree = "<absolute>"; };
+		340A958D2F5B23DC001C311F /* AppLovin Mediation Waterfall Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "AppLovin Mediation Waterfall Demo.app"; path = "/Users/ayselabdullayeva/Documents/hybid-ios-applovin-mediation-waterfall-demo/AppLovin Mediation Waterfall Demo/build/Debug-iphoneos/AppLovin Mediation Waterfall Demo.app"; sourceTree = "<absolute>"; };
 		344C8A1627DB5F57000B9C6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		344C8A1827DB5F57000B9C6F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		344C8A1D27DB5F57000B9C6F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				342726B12F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter in Frameworks */,
+				340A95902F5B23FC001C311F /* AppLovinMediationVerveCustomNetworkAdapter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,7 +105,7 @@
 			);
 			name = "AppLovin Mediation Waterfall Demo";
 			productName = "AppLovin Mediation Waterfall Demo";
-			productReference = 3427268F2F44CB420097D892 /* AppLovin Mediation Waterfall Demo.app */;
+			productReference = 340A958D2F5B23DC001C311F /* AppLovin Mediation Waterfall Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -133,7 +133,7 @@
 			);
 			mainGroup = 344C8A0A27DB5F57000B9C6F;
 			packageReferences = (
-				342726AF2F45FD320097D892 /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */,
+				340A958E2F5B23FC001C311F /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */,
 			);
 			productRefGroup = 344C8A0A27DB5F57000B9C6F;
 			projectDirPath = "";
@@ -390,20 +390,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		342726AF2F45FD320097D892 /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */ = {
+		340A958E2F5B23FC001C311F /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pubnative/AppLovinMediationVerveCustomNetworkAdapter";
 			requirement = {
-				branch = "VMI-1491-add-spm-support";
+				branch = master;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		342726B02F45FD320097D892 /* AppLovinMediationVerveCustomNetworkAdapter */ = {
+		340A958F2F5B23FC001C311F /* AppLovinMediationVerveCustomNetworkAdapter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 342726AF2F45FD320097D892 /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */;
+			package = 340A958E2F5B23FC001C311F /* XCRemoteSwiftPackageReference "AppLovinMediationVerveCustomNetworkAdapter" */;
 			productName = AppLovinMediationVerveCustomNetworkAdapter;
 		};
 /* End XCSwiftPackageProductDependency section */
