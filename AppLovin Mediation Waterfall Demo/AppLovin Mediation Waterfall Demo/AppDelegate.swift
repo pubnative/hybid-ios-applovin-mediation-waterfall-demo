@@ -8,21 +8,26 @@ import AppLovinSDK
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-// Step 3: Setup & Initialize AppLovin SDK
-        let settings = ALSdkSettings()
+        // Step 3: Setup & Initialize AppLovin SDK
+        guard let sdkKey = Bundle.main.object(forInfoDictionaryKey: "AppLovinSdkKey") as? String,
+              !sdkKey.isEmpty else {
+            assertionFailure("AppLovinSdkKey must be present in Info.plist and be a non-empty String.")
+            return false
+        }
+        let initConfig = ALSdkInitializationConfiguration(sdkKey: sdkKey) { builder in
+            builder.mediationProvider = "max"
+        }
+        let settings = ALSdk.shared().settings
 
         // Optional: Enable built in User Terms and Privacy Policy Flow
         settings.termsAndPrivacyPolicyFlowSettings.isEnabled = true
         settings.termsAndPrivacyPolicyFlowSettings.privacyPolicyURL = URL(string: "https://verve.com/product-privacy-policies/")
         settings.termsAndPrivacyPolicyFlowSettings.termsOfServiceURL = URL(string: "https://verve.com/publisher-content-guidelines/")
     
-        let sdk = ALSdk.shared(with: settings)!
+        ALSdk.shared().initialize(with: initConfig) { sdkConfig in
+          // Start loading ads
+        }
         
-        // Please make sure to set the mediation provider value to "max" to ensure proper functionality
-        sdk.mediationProvider = "max"
-        sdk.initializeSdk { (configuration: ALSdkConfiguration) in }
-
-// Step 4: Optional Verve HyBid SDK settings
     // Set COPPA (Optional)
         HyBid.setCoppa(false)
     // Test Mode (Optional)
