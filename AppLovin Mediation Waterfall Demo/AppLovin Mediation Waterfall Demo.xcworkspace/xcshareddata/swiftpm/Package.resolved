@@ -1,42 +1,42 @@
 {
-  "originHash" : "db9d72d07c786653460e512f1fcbd853daf48d3a5490c8de57fa60929469a164",
-  "pins" : [
+  "originHash": "db9d72d07c786653460e512f1fcbd853daf48d3a5490c8de57fa60929469a164",
+  "pins": [
     {
-      "identity" : "applovin-max-swift-package",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
-      "state" : {
-        "revision" : "199b14d91a2311b020d8a303c59d93010051d1f9",
-        "version" : "13.6.0"
+      "identity": "applovin-max-swift-package",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/AppLovin/AppLovin-MAX-Swift-Package.git",
+      "state": {
+        "revision": "199b14d91a2311b020d8a303c59d93010051d1f9",
+        "version": "13.6.0"
       }
     },
     {
-      "identity" : "applovinmediationvervecustomnetworkadapter",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pubnative/AppLovinMediationVerveCustomNetworkAdapter",
-      "state" : {
-        "branch" : "master",
-        "revision" : "69b502cc3857e2d374bd74ecc6e01ebd5e0c03f4"
+      "identity": "applovinmediationvervecustomnetworkadapter",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/pubnative/AppLovinMediationVerveCustomNetworkAdapter",
+      "state": {
+        "branch": "master",
+        "revision": "1331a7dee111aedae353e79f1fb093cd732a03ff"
       }
     },
     {
-      "identity" : "atom",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/pubnative/ATOM.git",
-      "state" : {
-        "revision" : "cd095527246c063c7ffdebe627fb0d3fe31932da",
-        "version" : "3.8.0-spm.2"
+      "identity": "atom",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/pubnative/ATOM.git",
+      "state": {
+        "revision": "cd095527246c063c7ffdebe627fb0d3fe31932da",
+        "version": "3.8.0-spm.2"
       }
     },
     {
-      "identity" : "hybid-ios-spm-sdk",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vervegroup/hybid-ios-spm-sdk.git",
-      "state" : {
-        "revision" : "40020b2288195920b050108f805b3fdba1699d42",
-        "version" : "3.7.1"
+      "identity": "hybid-ios-spm-sdk",
+      "kind": "remoteSourceControl",
+      "location": "https://github.com/vervegroup/hybid-ios-spm-sdk.git",
+      "state": {
+        "revision": "040f899fbbf4ce2107e73b0f515ce332c0490247",
+        "version": "3.9.0"
       }
     }
   ],
-  "version" : 3
+  "version": 3
 }
